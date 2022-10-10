@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<root>
+    <nombre>
+        Ernesto
+    </nombre>
+    <apellido1>
+        Pérez
+    </apellido1>
+    <apellido2>
+        Pampliega
+    </apellido2>
+    <curso>
+        2º
+    </curso>
+    <modulo>
+        DAW
+    </modulo>
+</root>
+
