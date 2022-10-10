@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">UT4Pruebas</string>
+    <string name="title_home">LINEAL</string>
+    <string name="title_dashboard">CAPAS</string>
+    <string name="title_notifications">RESTRINCCIONES</string>
+    <string name="str_inicio">Inicio</string>
+</resources>
