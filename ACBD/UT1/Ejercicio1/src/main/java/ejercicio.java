@@ -1,13 +1,12 @@
-
-import java.io.File;
 /**
- *
- * @author dam
+ * Ejercicio 1
+ * @author fsantag
  */
+import java.io.File;
 
 class ejercicio{
     public static void main(String[] args){
-        File archivo = new File("C:\\Users\\dam\\Documents\\NetBeansProjects\\Ejercicio1\\alumno.xml");
+        File archivo = new File("ejer1\\alumno.xml"); //No existía carpeta padre porque está colgando directamente de la carpeta Ejercicio1
         System.out.println("Nombre del Archivo: " + archivo.getName());
         System.out.println("Carpeta Padre: " + archivo.getParent());
         System.out.println("Ruta Absoluta: " + archivo.getAbsolutePath());
