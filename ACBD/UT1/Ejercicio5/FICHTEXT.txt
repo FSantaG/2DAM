@@ -1,0 +1,2 @@
+Esto es una prueba de escribir cadenas de caracteres en un fichero de texto
+Fernando Santamaría García

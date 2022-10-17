@@ -35,8 +35,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.debug = new System.Windows.Forms.TextBox();
             this.panelReserva = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.cerrarSesion = new System.Windows.Forms.Button();
             this.precioComida = new System.Windows.Forms.TextBox();
             this.precioBebida = new System.Windows.Forms.TextBox();
@@ -58,8 +59,7 @@
             this.errorLogin = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorReserva = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSalir = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panelInicioSesion.SuspendLayout();
             this.panelReserva.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -128,23 +128,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "USUARIO:";
             // 
-            // debug
-            // 
-            this.debug.Location = new System.Drawing.Point(26, 138);
-            this.debug.Name = "debug";
-            this.debug.Size = new System.Drawing.Size(237, 20);
-            this.debug.TabIndex = 6;
-            // 
             // panelReserva
             // 
             this.panelReserva.BackColor = System.Drawing.Color.Cornsilk;
+            this.panelReserva.Controls.Add(this.label11);
             this.panelReserva.Controls.Add(this.label10);
             this.panelReserva.Controls.Add(this.label9);
             this.panelReserva.Controls.Add(this.cerrarSesion);
             this.panelReserva.Controls.Add(this.precioComida);
             this.panelReserva.Controls.Add(this.precioBebida);
             this.panelReserva.Controls.Add(this.groupBox1);
-            this.panelReserva.Controls.Add(this.debug);
             this.panelReserva.Controls.Add(this.label8);
             this.panelReserva.Controls.Add(this.selectHora);
             this.panelReserva.Controls.Add(this.btnReservar);
@@ -162,6 +155,24 @@
             this.panelReserva.Size = new System.Drawing.Size(776, 288);
             this.panelReserva.TabIndex = 1;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(376, 164);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Precio";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(187, 164);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Precio";
+            // 
             // cerrarSesion
             // 
             this.cerrarSesion.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -177,19 +188,25 @@
             // 
             // precioComida
             // 
+            this.precioComida.Cursor = System.Windows.Forms.Cursors.Default;
             this.precioComida.Location = new System.Drawing.Point(373, 180);
             this.precioComida.Name = "precioComida";
+            this.precioComida.ReadOnly = true;
             this.precioComida.Size = new System.Drawing.Size(57, 20);
             this.precioComida.TabIndex = 20;
             this.precioComida.Text = "0";
+            this.precioComida.TextChanged += new System.EventHandler(this.precioComida_TextChanged);
             // 
             // precioBebida
             // 
+            this.precioBebida.Cursor = System.Windows.Forms.Cursors.Default;
             this.precioBebida.Location = new System.Drawing.Point(182, 180);
             this.precioBebida.Name = "precioBebida";
+            this.precioBebida.ReadOnly = true;
             this.precioBebida.Size = new System.Drawing.Size(57, 20);
             this.precioBebida.TabIndex = 19;
             this.precioBebida.Text = "0";
+            this.precioBebida.TextChanged += new System.EventHandler(this.precioBebida_TextChanged);
             // 
             // groupBox1
             // 
@@ -295,6 +312,7 @@
             this.selectComida.Name = "selectComida";
             this.selectComida.Size = new System.Drawing.Size(121, 21);
             this.selectComida.TabIndex = 12;
+            this.selectComida.SelectedIndexChanged += new System.EventHandler(this.selectComida_SelectedIndexChanged);
             // 
             // selectBebida
             // 
@@ -304,6 +322,7 @@
             this.selectBebida.Name = "selectBebida";
             this.selectBebida.Size = new System.Drawing.Size(121, 21);
             this.selectBebida.TabIndex = 11;
+            this.selectBebida.SelectedIndexChanged += new System.EventHandler(this.selectBebida_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -368,23 +387,14 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(187, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Precio";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(376, 164);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Precio";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(36, 193);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "(< o = 2,50€)";
             // 
             // formularioReserva
             // 
@@ -433,7 +443,6 @@
         private System.Windows.Forms.TextBox numAsistentes;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox selectHora;
-        private System.Windows.Forms.TextBox debug;
         private System.Windows.Forms.ErrorProvider errorLogin;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ErrorProvider errorReserva;
@@ -443,6 +452,7 @@
         private System.Windows.Forms.TextBox precioBebida;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
     }
 }
 
