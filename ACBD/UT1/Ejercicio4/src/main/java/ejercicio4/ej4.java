@@ -30,9 +30,9 @@ public class ej4 {
             FileReader lecturaArchivoParcial = new FileReader(archivoPropio);
             int i;
             int tope = 20;
-            int contadorCaracteres = 0;
+            int contadorCaracteres = 1;
             while((i = lecturaArchivoParcial.read())!= -1){
-                if(contadorCaracteres <= tope){
+                if(contadorCaracteres < tope){
                     System.out.print((char)i);
                     contadorCaracteres++;
                 }else{
