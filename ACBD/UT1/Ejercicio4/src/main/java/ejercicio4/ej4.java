@@ -43,7 +43,7 @@ public class ej4 {
             }
             lecturaArchivoParcial.close();
         }catch(Exception e){
-            
+            System.out.println("Se ha producido un error: " + e.getMessage());
         }
     }
 }

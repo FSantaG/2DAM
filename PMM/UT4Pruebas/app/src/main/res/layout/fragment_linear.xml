@@ -68,6 +68,6 @@
                 android:layout_height="wrap_content"
                 android:text="Botón"/>
         </LinearLayout>
-        <!--<include layout="@layout/fragment_frame"/>
-        <include layout="@layout/fragment_constraint"/>-->
+        <include layout="@layout/fragment_dashboard"/>
+        <include layout="@layout/fragment_notifications"/>
     </LinearLayout></ScrollView>
