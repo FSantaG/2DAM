@@ -10,11 +10,14 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.e1mdsantamariafernando.databinding.ActivityMainBinding
+import com.example.e1mdsantamariafernando.databinding.FragmentFirstBinding
+import com.example.e1mdsantamariafernando.databinding.FragmentSecondBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration;
     private lateinit var binding: ActivityMainBinding
+    private lateinit var bindingLogin: FragmentFirstBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener{
-            
+            setContentView(bindingLogin.root)
         }
     }
 
