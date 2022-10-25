@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="selectOption">Select one of the following options:</string>
+    <string name="login">Continue</string>
+    <string name="see_credits">Author</string>
+    <string name="app_name">Ejercicio 1</string>
+    <string name="action_settings">Hola</string>
+</resources>

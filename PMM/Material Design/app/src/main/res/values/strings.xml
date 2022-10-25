@@ -92,4 +92,6 @@
     <string name="action_settings">Settings</string>
     <string name="save">Save</string>
     <string name="buttonContentDesc">Pito</string>
+    <string name="direccion_web">Dirección Web</string>
+    <string name="requerido">Requerido</string>
 </resources>
