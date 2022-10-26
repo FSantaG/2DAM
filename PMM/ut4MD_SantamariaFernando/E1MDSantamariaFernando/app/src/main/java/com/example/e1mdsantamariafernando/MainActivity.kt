@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.e1mdsantamariafernando.databinding.ActivityMainBinding
 import com.example.e1mdsantamariafernando.databinding.FragmentFirstBinding
 import com.example.e1mdsantamariafernando.databinding.FragmentSecondBinding
@@ -16,17 +17,39 @@ import com.example.e1mdsantamariafernando.databinding.FragmentSecondBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration;
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var bindingLogin: FragmentFirstBinding
+    private lateinit var binding: ActivityMainBinding;
+    private lateinit var bindingLogin: FragmentFirstBinding;
+    private lateinit var bindingAuthor: FragmentSecondBinding;
+
+    private var failedLogin: Int = 0;
+    private var userCredential = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        bindingLogin = FragmentFirstBinding.inflate(layoutInflater)
+        bindingAuthor = FragmentSecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener{
-            setContentView(bindingLogin.root)
+            setContentView(bindingLogin.root);
+        }
+
+        binding.btnCredits.setOnClickListener{
+            setContentView(bindingAuthor.root);
+        }
+
+        bindingAuthor.btnBack.setOnClickListener{
+            setContentView(binding.root);
+        }
+
+        bindingLogin.btnLogin.setOnClickListener{
+            this.failedLogin++;
+            if(this.failedLogin == 3){
+                Toast.makeText(applicationContext, getString(R.string.shutdownMessage), Toast.LENGTH_LONG).show();
+                finishAffinity(); //Cierra la aplicación
+            }
         }
     }
 

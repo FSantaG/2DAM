@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selectOption">Seleccione una de estas opciones:</string>
+    <string name="login">Continuar</string>
+    <string name="see_credits">Autor</string>
+    <string name="app_name">Ejercicio 1</string>
+    <string name="action_settings">Hola</string>
+    <string name="authorName">Fernando Santamaría</string>
+    <string name="year">2.º Desarrollo de Aplicaciones Multiplataforma</string>
+    <string name="returnToTheMainPage">Volver al Inicio</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="shutdownMessage">La aplicación se ha cerrado por numerosos intentos fallidos de inicio de sesión.</string>
+
+</resources>
