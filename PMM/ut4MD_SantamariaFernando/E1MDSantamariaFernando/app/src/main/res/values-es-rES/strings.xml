@@ -11,5 +11,8 @@
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="shutdownMessage">La aplicación se ha cerrado por numerosos intentos fallidos de inicio de sesión.</string>
-
+    <string name="userLogin">Iniciar Sesión</string>
+    <string name="required">Obligatorio</string>
+    <string name="welcome">"Bienvenid@, "</string>
+    <string name="failedLogin">Usuario y Contraseña no coincidentes. Inténtalo de nuevo</string>
 </resources>

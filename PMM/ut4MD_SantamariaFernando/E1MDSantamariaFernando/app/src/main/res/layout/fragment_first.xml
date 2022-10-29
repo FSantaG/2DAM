@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/user"
-            app:helperText="Required"
+            app:helperText="@string/required"
             app:endIconMode="clear_text">
             <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtUser"
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            app:helperText="Required"
+            app:helperText="@string/required"
             app:endIconMode="password_toggle"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -42,6 +42,6 @@
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"/>
+            android:text="@string/userLogin"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

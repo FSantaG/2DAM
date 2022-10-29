@@ -11,4 +11,8 @@
     <string name="user">User</string>
     <string name="password">Password</string>
     <string name="shutdownMessage">The app shutted down due of many failed tries.</string>
+    <string name="userLogin">Login</string>
+    <string name="required">Required</string>
+    <string name="welcome">"Welcome, "</string>
+    <string name="failedLogin">User and Password doesn\'t match. Try again</string>
 </resources>

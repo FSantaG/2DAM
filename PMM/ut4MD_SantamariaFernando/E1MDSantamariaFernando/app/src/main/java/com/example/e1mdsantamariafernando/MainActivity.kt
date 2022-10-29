@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bindingAuthor: FragmentSecondBinding;
 
     private var failedLogin: Int = 0;
-    private var userCredential = 0;
+    private var userCredential = mapOf("usuario1" to "password1", "Manolo" to "password1", "usuario2" to "password2", "Pepe" to "password2");
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +45,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         bindingLogin.btnLogin.setOnClickListener{
-            this.failedLogin++;
+            var user = bindingLogin.txtUser.text.toString();
+            var pass = bindingLogin.txtPass.text.toString();
+
+            if(user in userCredential){
+                if(pass == userCredential[user]){
+                    val filteredMap = userCredential.filter { (key, value) -> !key.startsWith("usuario") && value == pass}
+                    Toast.makeText(applicationContext, getString(R.string.welcome) + filteredMap.keys.first(), Toast.LENGTH_LONG).show();
+                    finishAffinity();
+                }else{
+                    this.failedLogin++;
+                    Toast.makeText(applicationContext, getString(R.string.failedLogin), Toast.LENGTH_LONG).show();
+                }
+            }else{
+                this.failedLogin++;
+                Toast.makeText(applicationContext, getString(R.string.failedLogin), Toast.LENGTH_LONG).show();
+            }
+
+
             if(this.failedLogin == 3){
                 Toast.makeText(applicationContext, getString(R.string.shutdownMessage), Toast.LENGTH_LONG).show();
                 finishAffinity(); //Cierra la aplicación
