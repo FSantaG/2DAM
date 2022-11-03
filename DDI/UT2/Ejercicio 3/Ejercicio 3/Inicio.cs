@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ejercicio_3
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
         String[] callesDisponibles = { "Calle San José", "Calle Ramón y Cajal",
         "Calle Burguense", "Calle Molinillo", "Calle Andrés Martinez Zatorre",
@@ -18,7 +18,7 @@ namespace Ejercicio_3
         "Calle Padre Salaverri", "Calle Diego de Siloe", "Calle Cartuja de Miraflores",
         "Calle Hijos de Santiago Rodriguez", "Calle Nicolás de Vergara",
         "Calle Obispo Don Mauricio" };
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
 
@@ -28,33 +28,40 @@ namespace Ejercicio_3
         }
         private void nombre_TextChanged(object sender, EventArgs e)
         {
-            char[] caracteres = nombre.Text.ToCharArray();
-            if (!checkCaracteres(caracteres))
-            {
-                errorSeleccion.SetError(nombre, "Por favor, introduzca sólo letras");
-                deshabilitarBtnReserva();
-            }
-            else
-            {
-                errorSeleccion.SetError(nombre, "");
-                habilitarBtnReserva();
-            }
+            char[] caracteresNombre = nombre.Text.ToCharArray();
+            realizarComprobacion(checkCaracteresLetras(caracteresNombre), nombre, "Por favor, introduzca sólo letras");
         }
 
         private void telefono_TextChanged(object sender, EventArgs e)
         {
             char[] numTelefono = telefono.Text.ToCharArray();
-            if (checkCaracteres(numTelefono))
-            {
-                errorSeleccion.SetError(telefono, "Por favor, introduzca sólo caracteres numéricos");
-                deshabilitarBtnReserva();
-            }
-            else
-            {
-                errorSeleccion.SetError(telefono, "");
-                habilitarBtnReserva();
-            }
+            realizarComprobacion(checkCaracteresNums(numTelefono), telefono, "Por favor, introduzca sólo caracteres numéricos");
         }
+
+        private void num_TextChanged(object sender, EventArgs e)
+        {
+            char[] numeroCalle = num.Text.ToCharArray();
+            realizarComprobacion(checkCaracteresNums(numeroCalle), num, "Por favor, introduzca sólo caracteres numéricos");
+        }
+
+        private void piso_TextChanged(object sender, EventArgs e)
+        {
+            char[] numPiso = piso.Text.ToCharArray();
+            realizarComprobacion(checkCaracteresNums(numPiso), piso, "Por favor, introduzca sólo caracteres numéricos");
+        }
+
+        private void letra_TextChanged(object sender, EventArgs e)
+        {
+            char[] letraPiso = letra.Text.ToCharArray();
+            realizarComprobacion(checkCaracteresLetras(letraPiso), letra, "Sólo se admite una letra");
+        }
+
+        private void btnReserva_Click(object sender, EventArgs e)
+        {
+            using (Pedido ventanaPedidos = new Pedido(nombre.Text))
+                ventanaPedidos.ShowDialog();
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -86,9 +93,7 @@ namespace Ejercicio_3
                 selectCalle.Items.Add(callesDisponibles[i]);
             }
         }
-        //TODO
-        //Modificar esto, y hacer 2 verificadores separados
-        private Boolean checkCaracteres(char[] caracteres)
+        private Boolean checkCaracteresLetras(char[] caracteres)
         {
             for (int i = 0; i < caracteres.Length; i++)
             {
@@ -100,6 +105,30 @@ namespace Ejercicio_3
             return true;
         }
 
-        
+        private Boolean checkCaracteresNums(char[] caracteres)
+        {
+            for (int i = 0; i < caracteres.Length; i++)
+            {
+                if (Char.IsLetter(caracteres[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void realizarComprobacion(Boolean verificador,TextBox campo ,String mensajeError)
+        {
+            if (!verificador)
+            {
+                errorSeleccion.SetError(campo, mensajeError);
+                deshabilitarBtnReserva();
+            }
+            else
+            {
+                errorSeleccion.SetError(campo, "");
+                habilitarBtnReserva();
+            }
+        }
     }
 }

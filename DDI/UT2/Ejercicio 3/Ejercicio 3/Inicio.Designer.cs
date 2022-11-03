@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio_3
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -77,7 +77,6 @@
             this.menuNormal.Name = "menuNormal";
             this.menuNormal.Size = new System.Drawing.Size(116, 20);
             this.menuNormal.TabIndex = 1;
-            this.menuNormal.TabStop = true;
             this.menuNormal.Text = "Menú Normal";
             this.menuNormal.UseVisualStyleBackColor = true;
             // 
@@ -89,7 +88,6 @@
             this.menuVegano.Name = "menuVegano";
             this.menuVegano.Size = new System.Drawing.Size(120, 20);
             this.menuVegano.TabIndex = 2;
-            this.menuVegano.TabStop = true;
             this.menuVegano.Text = "Menú Vegano";
             this.menuVegano.UseVisualStyleBackColor = true;
             // 
@@ -199,6 +197,7 @@
             this.letra.Name = "letra";
             this.letra.Size = new System.Drawing.Size(38, 20);
             this.letra.TabIndex = 18;
+            this.letra.TextChanged += new System.EventHandler(this.letra_TextChanged);
             // 
             // label10
             // 
@@ -216,6 +215,7 @@
             this.piso.Name = "piso";
             this.piso.Size = new System.Drawing.Size(43, 20);
             this.piso.TabIndex = 16;
+            this.piso.TextChanged += new System.EventHandler(this.piso_TextChanged);
             // 
             // textBox4
             // 
@@ -269,6 +269,7 @@
             this.num.Name = "num";
             this.num.Size = new System.Drawing.Size(43, 20);
             this.num.TabIndex = 11;
+            this.num.TextChanged += new System.EventHandler(this.num_TextChanged);
             // 
             // btnReserva
             // 
@@ -281,6 +282,7 @@
             this.btnReserva.TabIndex = 11;
             this.btnReserva.Text = "RESERVAR";
             this.btnReserva.UseVisualStyleBackColor = false;
+            this.btnReserva.Click += new System.EventHandler(this.btnReserva_Click);
             // 
             // btnSalir
             // 
@@ -306,7 +308,7 @@
             this.debug.Size = new System.Drawing.Size(100, 20);
             this.debug.TabIndex = 13;
             // 
-            // Form1
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -326,8 +328,8 @@
             this.Controls.Add(this.menuVegano);
             this.Controls.Add(this.menuNormal);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Elija aquí su menú";
+            this.Name = "Inicio";
+            this.Text = "Restaurante Petecander";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorSeleccion)).EndInit();
