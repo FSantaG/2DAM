@@ -26,6 +26,16 @@ namespace Ejercicio_3
             menuVegano.Checked = false;
             rellenarCalles();
         }
+        private void menuNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarBtnReserva();
+        }
+
+        private void menuVegano_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarBtnReserva();
+        }
+
         private void nombre_TextChanged(object sender, EventArgs e)
         {
             char[] caracteresNombre = nombre.Text.ToCharArray();
@@ -35,7 +45,14 @@ namespace Ejercicio_3
         private void telefono_TextChanged(object sender, EventArgs e)
         {
             char[] numTelefono = telefono.Text.ToCharArray();
-            realizarComprobacion(checkCaracteresNums(numTelefono), telefono, "Por favor, introduzca sólo caracteres numéricos");
+            if(telefono.Text.Length < 9)
+            {
+                errorSeleccion.SetError(telefono, "Introduzca un número de teléfono válido");
+            }
+            else
+            {
+                realizarComprobacion(checkCaracteresNums(numTelefono), telefono, "Por favor, introduzca sólo caracteres numéricos");
+            }
         }
 
         private void num_TextChanged(object sender, EventArgs e)
@@ -58,7 +75,16 @@ namespace Ejercicio_3
 
         private void btnReserva_Click(object sender, EventArgs e)
         {
-            using (Pedido ventanaPedidos = new Pedido(nombre.Text))
+            String menuElegido = "";
+            if (menuNormal.Checked)
+            {
+                menuElegido = "Normal";
+            }
+            else if (menuVegano.Checked) 
+            {
+                menuElegido = "Vegano";
+            }
+            using (Pedido ventanaPedidos = new Pedido(nombre.Text, menuElegido))
                 ventanaPedidos.ShowDialog();
         }
 
@@ -130,5 +156,7 @@ namespace Ejercicio_3
                 habilitarBtnReserva();
             }
         }
+
+        
     }
 }

@@ -53,7 +53,6 @@
             this.btnReserva = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.errorSeleccion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.debug = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorSeleccion)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +78,7 @@
             this.menuNormal.TabIndex = 1;
             this.menuNormal.Text = "Menú Normal";
             this.menuNormal.UseVisualStyleBackColor = true;
+            this.menuNormal.CheckedChanged += new System.EventHandler(this.menuNormal_CheckedChanged);
             // 
             // menuVegano
             // 
@@ -90,6 +90,7 @@
             this.menuVegano.TabIndex = 2;
             this.menuVegano.Text = "Menú Vegano";
             this.menuVegano.UseVisualStyleBackColor = true;
+            this.menuVegano.CheckedChanged += new System.EventHandler(this.menuVegano_CheckedChanged);
             // 
             // label2
             // 
@@ -301,20 +302,12 @@
             // 
             this.errorSeleccion.ContainerControl = this;
             // 
-            // debug
-            // 
-            this.debug.Location = new System.Drawing.Point(604, 158);
-            this.debug.Name = "debug";
-            this.debug.Size = new System.Drawing.Size(100, 20);
-            this.debug.TabIndex = 13;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.debug);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnReserva);
             this.Controls.Add(this.panel1);
@@ -364,7 +357,6 @@
         private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ErrorProvider errorSeleccion;
-        private System.Windows.Forms.TextBox debug;
     }
 }
 
