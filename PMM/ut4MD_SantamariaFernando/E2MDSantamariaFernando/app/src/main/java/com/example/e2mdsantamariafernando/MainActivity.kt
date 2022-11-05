@@ -37,11 +37,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Creado por: Fernando Santamaría", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-
-        bindingFirstFragment.btn0.setOnClickListener{ view ->
-            Snackbar.make(view, "Pito", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -169,11 +169,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="0" />
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="0"
+            tools:ignore="ButtonStyle"/>
         <Button
             android:id="@+id/btnEquals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:text="="
             tools:ignore="ButtonStyle" />
