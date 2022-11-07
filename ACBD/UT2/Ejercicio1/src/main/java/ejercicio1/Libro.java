@@ -2,7 +2,7 @@
 package ejercicio1;
 
 /**
- *
+ *Clase Libro. Almacena los datos del libro recogidos en el XML
  * @author dam
  */
 public class Libro {
@@ -12,6 +12,7 @@ public class Libro {
     String editorial;
     String year;
     
+    //Sucesión de Getters y Setters
     public String getIsbn() {
         return isbn;
     }
@@ -51,7 +52,9 @@ public class Libro {
     public void setYear(String year) {
         this.year = year;
     }
-    
+    /**
+     * Impresión de los datos por pantalla
+     */
     public void imprimirDatos(){
         System.out.println("ISBN: " + this.isbn);
         System.out.println("Nombre del Libro: " + this.nombre);
