@@ -94,4 +94,7 @@
     <string name="buttonContentDesc">Pito</string>
     <string name="direccion_web">Dirección Web</string>
     <string name="requerido">Requerido</string>
+    <string name="vacio">vacio</string>
+    <string name="direccion">Dirección Web no Válida</string>
+    <string name="espacioVacio">Introduzca una URL válida</string>
 </resources>
