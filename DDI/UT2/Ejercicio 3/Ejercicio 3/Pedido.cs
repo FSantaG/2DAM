@@ -34,16 +34,17 @@ namespace Ejercicio_3
         //Opciones globales
 
         //Bebidas
-        Dictionary<String, Double> bebidas;
+        Dictionary<String, Double> bebidas = new Dictionary<string, double>();
         String[] arrayBebidas = { "Refresco", "Vino", "Café", "Cerveza", "Champán" };
         Double[] arrayPrecios = { 1.60, 3.40, 2.60, 2.00, 5.90 };
 
         //Precios
+        Double precioPrimero; //Precio del primer plato del menú elegido
+        Double precioSegundo; //Precio del segundo plato del menú elegido
         Double precioPrimeroN = 4.4;
         Double precioPrimeroV = 4.4 + (4.4 * 20 / 100);
         Double precioSegundoN = 5.5;
         Double precioSegundoV = 5.5 + (5.5 * 20 / 100);
-        Double bebida;
         Double total;
 
         public Pedido(String nombre, String menuElegido)
@@ -51,21 +52,27 @@ namespace Ejercicio_3
             InitializeComponent();
             this.nomUsuario = nombre;
             this.menuElegido = menuElegido;
+
+            for(int i = 0; i < arrayBebidas.Length; i++)
+            {
+                bebidas.Add(arrayBebidas[i], arrayPrecios[i]);
+            }
         }
 
         private void Pedido_Load(object sender, EventArgs e)
         {
-            bienvenido.Text += this.nomUsuario;
+            bienvenido.Text += nomUsuario;
             rellenarBebidas();
-            switch (this.menuElegido)
+            switch (menuElegido)
             {
                 case "Normal":
                     rellenarPlato(primerPlatoN, selectPrimero);
-                    primerPlato.Text += precioPrimeroN.ToString() + ")";
+                    primerPlato.Text += precioPrimeroN.ToString() + "€)";
                     rellenarPlato(segundoPlatoN, selectSegundo);
-                    segundoPlato.Text += precioSegundoN.ToString() + ")";
+                    segundoPlato.Text += precioSegundoN.ToString() + "€)";
                     rellenarPlato(postreN, selectPostre);
-                    total += precioPrimeroN + precioSegundoN;
+                    precioPrimero = precioPrimeroN;
+                    precioSegundo = precioSegundoN;
                     break;
                 case "Vegano":
                     rellenarPlato(primerPlatoV, selectPrimero);
@@ -73,9 +80,52 @@ namespace Ejercicio_3
                     rellenarPlato(segundoPlatoV, selectSegundo);
                     segundoPlato.Text += precioSegundoV.ToString() + "€)";
                     rellenarPlato(postreV, selectPostre);
-                    total += precioPrimeroV + precioSegundoV;
+                    precioPrimero = precioPrimeroV;
+                    precioSegundo = precioSegundoV;
                     break;
             }
+        }
+
+        private void selectSegundo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(selectSegundo.SelectedIndex != -1)
+            {
+                btnVerPedido.Enabled = true;
+            }
+        }
+
+        private void selectBebida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            limpiarPrecioBebida();
+            bebidaPrecio.Text += "(" +
+                bebidas[arrayBebidas[selectBebida.SelectedIndex]] +
+                "€)";
+        }
+
+        private void btnVerPedido_Click(object sender, EventArgs e)
+        {
+            if(selectPrimero.SelectedIndex != -1) {
+                total += precioPrimero;
+            }
+            total += precioSegundo;
+            if(selectPostre.SelectedIndex != -1)
+            {
+                total += 3;
+            }
+            if(selectBebida.SelectedIndex != -1)
+            {
+                total += bebidas[arrayBebidas[selectBebida.SelectedIndex]];
+            }
+            if (quierePan.Checked)
+            {
+                total += 0.8;
+            }
+            string mensaje = "Precio a Pagar: " + total + "€. " +
+                "\nPulse el botón para salir";
+            MessageBoxButtons botones = MessageBoxButtons.OK;
+            MessageBox.Show(mensaje, "Recibo", botones);
+
+            Application.Exit();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -107,6 +157,9 @@ namespace Ejercicio_3
             }
         }
 
-        
+        private void limpiarPrecioBebida()
+        {
+            bebidaPrecio.Text = "Bebida ";
+        }
     }
 }

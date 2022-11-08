@@ -40,7 +40,7 @@
             this.primerPlato = new System.Windows.Forms.Label();
             this.segundoPlato = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.bebidaPrecio = new System.Windows.Forms.Label();
             this.errorPlatos = new System.Windows.Forms.ErrorProvider(this.components);
             this.quierePan = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorPlatos)).BeginInit();
@@ -70,6 +70,7 @@
             this.selectSegundo.Name = "selectSegundo";
             this.selectSegundo.Size = new System.Drawing.Size(184, 21);
             this.selectSegundo.TabIndex = 2;
+            this.selectSegundo.SelectedIndexChanged += new System.EventHandler(this.selectSegundo_SelectedIndexChanged);
             // 
             // selectPostre
             // 
@@ -88,10 +89,12 @@
             this.selectBebida.Name = "selectBebida";
             this.selectBebida.Size = new System.Drawing.Size(133, 21);
             this.selectBebida.TabIndex = 4;
+            this.selectBebida.SelectedIndexChanged += new System.EventHandler(this.selectBebida_SelectedIndexChanged);
             // 
             // btnVerPedido
             // 
             this.btnVerPedido.BackColor = System.Drawing.Color.Gold;
+            this.btnVerPedido.Enabled = false;
             this.btnVerPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerPedido.Location = new System.Drawing.Point(252, 309);
             this.btnVerPedido.Name = "btnVerPedido";
@@ -99,6 +102,7 @@
             this.btnVerPedido.TabIndex = 6;
             this.btnVerPedido.Text = "Visualizar Pedido";
             this.btnVerPedido.UseVisualStyleBackColor = false;
+            this.btnVerPedido.Click += new System.EventHandler(this.btnVerPedido_Click);
             // 
             // btnVolver
             // 
@@ -157,16 +161,16 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Postre (3€)";
             // 
-            // label4
+            // bebidaPrecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.label4.Location = new System.Drawing.Point(218, 213);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Bebida (";
+            this.bebidaPrecio.AutoSize = true;
+            this.bebidaPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bebidaPrecio.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.bebidaPrecio.Location = new System.Drawing.Point(218, 213);
+            this.bebidaPrecio.Name = "bebidaPrecio";
+            this.bebidaPrecio.Size = new System.Drawing.Size(70, 20);
+            this.bebidaPrecio.TabIndex = 14;
+            this.bebidaPrecio.Text = "Bebida ";
             // 
             // errorPlatos
             // 
@@ -191,7 +195,7 @@
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.quierePan);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.bebidaPrecio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.segundoPlato);
             this.Controls.Add(this.primerPlato);
@@ -225,7 +229,7 @@
         private System.Windows.Forms.Label primerPlato;
         private System.Windows.Forms.Label segundoPlato;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label bebidaPrecio;
         private System.Windows.Forms.ErrorProvider errorPlatos;
         private System.Windows.Forms.CheckBox quierePan;
     }
