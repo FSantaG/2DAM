@@ -10,6 +10,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.e1mdsantamariafernando.databinding.ActivityMainBinding
 import com.example.e1mdsantamariafernando.databinding.FragmentFirstBinding
 import com.example.e1mdsantamariafernando.databinding.FragmentSecondBinding
@@ -68,6 +70,12 @@ class MainActivity : AppCompatActivity() {
                 finishAffinity(); //Cierra la aplicación
             }
         }
+
+        Glide.with(this)
+            .load("https://static.wikia.nocookie.net/kirby/images/0/09/Kirby_Kirby%27s_Dream_Buffet.png/revision/latest?cb=20220818144429")
+            //.centerCrop()
+            .diskCacheStrategy(DiskCacheStrategy.ALL)//ALL -> Guarda imagen real + modificada
+            .into(binding.imageSpace);
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
