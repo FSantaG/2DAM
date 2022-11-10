@@ -323,6 +323,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Inicio";
             this.Text = "Restaurante Petecander";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorSeleccion)).EndInit();

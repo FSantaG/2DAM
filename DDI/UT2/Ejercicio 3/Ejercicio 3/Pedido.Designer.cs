@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.debug = new System.Windows.Forms.TextBox();
             this.selectPrimero = new System.Windows.Forms.ComboBox();
             this.selectSegundo = new System.Windows.Forms.ComboBox();
             this.selectPostre = new System.Windows.Forms.ComboBox();
@@ -45,13 +44,6 @@
             this.quierePan = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorPlatos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // debug
-            // 
-            this.debug.Location = new System.Drawing.Point(608, 31);
-            this.debug.Name = "debug";
-            this.debug.Size = new System.Drawing.Size(100, 20);
-            this.debug.TabIndex = 0;
             // 
             // selectPrimero
             // 
@@ -206,7 +198,6 @@
             this.Controls.Add(this.selectPostre);
             this.Controls.Add(this.selectSegundo);
             this.Controls.Add(this.selectPrimero);
-            this.Controls.Add(this.debug);
             this.Name = "Pedido";
             this.Text = "Restaurante Petecander";
             this.Load += new System.EventHandler(this.Pedido_Load);
@@ -217,8 +208,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox debug;
         private System.Windows.Forms.ComboBox selectPrimero;
         private System.Windows.Forms.ComboBox selectSegundo;
         private System.Windows.Forms.ComboBox selectPostre;

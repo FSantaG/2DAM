@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/**
+ * Ventana de Creación del Pedido
+ * @author Fernando Santamaría
+ **/
 namespace Ejercicio_3
 {
     public partial class Pedido : Form
@@ -47,18 +50,23 @@ namespace Ejercicio_3
         Double precioSegundoV = 5.5 + (5.5 * 20 / 100);
         Double total;
 
+        /**
+         * Constructor
+        **/
         public Pedido(String nombre, String menuElegido)
         {
             InitializeComponent();
             this.nomUsuario = nombre;
             this.menuElegido = menuElegido;
-
-            for(int i = 0; i < arrayBebidas.Length; i++)
-            {
-                bebidas.Add(arrayBebidas[i], arrayPrecios[i]);
-            }
         }
 
+        /**
+         * Evento de carga del formulario.
+         * Valora si el menú escogido en la anterior ventana
+         * es el normal o el vegano, y en función de ello
+         * carga unos valores u otros dentro de los campos
+         * Primer Plato, Segundo Plato y Postre
+         **/
         private void Pedido_Load(object sender, EventArgs e)
         {
             bienvenido.Text += nomUsuario;
@@ -86,6 +94,12 @@ namespace Ejercicio_3
             }
         }
 
+        /**
+         * Evento de selección de valores del segundo plato
+         * 
+         * Cómo es el único obligatorio, este habilitará
+         * el botón
+         **/
         private void selectSegundo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(selectSegundo.SelectedIndex != -1)
@@ -94,6 +108,12 @@ namespace Ejercicio_3
             }
         }
 
+        /**
+         * Evento de selección de bebida.
+         * 
+         * Cambia en tiempo real el precio de la bebida según el índice
+         * seleccionado, mostrándolo en la etiqueta superior.
+         **/
         private void selectBebida_SelectedIndexChanged(object sender, EventArgs e)
         {
             limpiarPrecioBebida();
@@ -102,6 +122,12 @@ namespace Ejercicio_3
                 "€)";
         }
 
+        /**
+         * Evento de click del botón Ver Pedido
+         * 
+         * Calcula el precio a pagar por el plato, mostrándolo en un
+         * modal que, al cerrarlo, cerrará la aplicación
+         **/
         private void btnVerPedido_Click(object sender, EventArgs e)
         {
             if(selectPrimero.SelectedIndex != -1) {
@@ -128,6 +154,11 @@ namespace Ejercicio_3
             Application.Exit();
         }
 
+        /**
+         * Evento del botón Volver.
+         * 
+         * Cierra la ventana actual para modificar datos en la anterior vista
+         **/
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -135,6 +166,11 @@ namespace Ejercicio_3
 
         //METODOS PROPIOS
 
+        /**
+         * Rellena los platos
+         * @param String[] platos Lista de platos disponibles
+         * @param ComboBox campo ComboBox donde se desglosarán los platos del menú seleccionado
+         **/
         private void rellenarPlato(String[] platos, ComboBox campo)
         {
             for(int i = 0; i < platos.Length; i++)
@@ -143,6 +179,10 @@ namespace Ejercicio_3
             }
         }
 
+        /**
+         * Rellena el ComboBox de bebidas, y asigna pares Bebida -> Precio
+         * Dentro del diccionario de bebidas
+         **/
         private void rellenarBebidas()
         {
             bebidas = new Dictionary<string, double>();
@@ -157,6 +197,9 @@ namespace Ejercicio_3
             }
         }
 
+        /**
+         * Limpia de la etiqueta Bebida el precio para que esta quede más clara
+         **/
         private void limpiarPrecioBebida()
         {
             bebidaPrecio.Text = "Bebida ";
