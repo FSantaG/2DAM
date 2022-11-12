@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">E3MDSantamariaFernando</string>
+    <string name="btnSearch">Search</string>
+    <string name="inputHint">Introduce a number here</string>
+    <string name="notNumberError">Introduce a valid number please</string>
+    <string name="moreThanZero">Introduce a different value, please</string>
+    <string name="msgOutputPt1">"The prime number that occupies position "</string>
+    <string name="msgOutputPt2">" is "</string>
+</resources>

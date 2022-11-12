@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnSearch">Buscar</string>
+    <string name="inputHint">Introduce aquí un número</string>
+    <string name="notNumberError">Introduzca un número válido, por favor</string>
+    <string name="moreThanZero">Introduzca un número mayor que cero, por favor</string>
+    <string name="msgOutputPt1">"El número primo que ocupa la posición "</string>
+    <string name="msgOutputPt2">" es "</string>
+</resources>
