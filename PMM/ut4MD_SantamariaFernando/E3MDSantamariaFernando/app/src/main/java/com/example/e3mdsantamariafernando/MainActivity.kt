@@ -63,20 +63,28 @@ class MainActivity : AppCompatActivity() {
      * @param position Posición del número primo a buscas
      * @return El número primo buscado
      */
+    //No tengo ni la menor idea de cómo hacer esto sin que el programa explote.
+    //Quizá tener 2 bucles internos sea un problema, pero no se me ocurre cómo solvertarlo
     private fun findPrimeDigit(position:Int):Int {
         var isPrime:Boolean = true;
         var possiblePM:Int = 2;
         var counter = 1;
         var primeNumber:Int = 1;
         while (counter <= position){
-            var i = 2;
+            for (i in 2..possiblePM / 2) {
+                if (possiblePM % i == 0) {
+                    isPrime = false;
+                    break
+                }
+            }
+            /*var i = 2;
             while (i <= possiblePM / 2) {
                 if (possiblePM % i == 0) {
                     isPrime = false;
                     break
                 }
                 i++;
-            }
+          }*/
             if(isPrime){
                 counter++;
                 primeNumber = possiblePM;
