@@ -1,5 +1,6 @@
 package com.example.pruebas
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -10,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import android.webkit.URLUtil
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.pruebas.databinding.ActivityScrollingBinding
@@ -60,8 +62,25 @@ class ScrollingActivity : AppCompatActivity() {
                 binding.content.titURL.error = error;
             }
         }
+        binding.content.btnLlamada.setOnClickListener(){
+            llamada();
+        }
     }
 
+    private fun llamada(){
+        val intent = Intent(this, SegundaActividad::class.java);
+        intent.putExtra("url", binding.content.etUrl.text.toString());
+        val usuario = Usuario("Pepe", 21);
+        intent.putExtra("usuario", usuario);
+        //startActivity(intent); -> //Si no se esperan resultados
+        //startActivityForResult(intent, 1234); //Deprecated
+        resultadoActividad.launch(intent);
+        finish();
+    }
+
+    val resultadoActividad = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        result->
+    }
     private fun cargarImagen(url:String="https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/games_6/nintendo_switch_7/nswitch_kirbyandtheforgottenland/KirbyAndTheForgottenLand_Intro_SideImg_Kirby.png"){
         Glide.with(this)
             .load(url)

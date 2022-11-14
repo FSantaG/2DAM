@@ -28,12 +28,15 @@ class MainActivity : AppCompatActivity() {
         binding.btnSearch.setOnClickListener {
             var errorMsg:String? = null;
             val inputText = binding.searchValue.text.toString();
-            if(isNumber(inputText) && inputText.toInt() != 0){
+            if(isNumber(inputText) && inputText.toInt() != 0 && inputText.toInt() < 10000){
                 errorMsg = null;
                 val primeNumber:Int = findPrimeDigit(inputText.toInt());
                 binding.output.text = getString(R.string.msgOutputPt1) + inputText + getString(R.string.msgOutputPt2) + primeNumber;
             }else if(inputText.toInt() == 0){
                 errorMsg = getString(R.string.moreThanZero);
+            }
+            else if(inputText.toInt() >= 10000){
+                errorMsg = getString(R.string.moreThanTenThousand);
             }
             else{
                 errorMsg = getString(R.string.notNumberError);
@@ -63,31 +66,36 @@ class MainActivity : AppCompatActivity() {
      * @param position Posición del número primo a buscas
      * @return El número primo buscado
      */
-    //No tengo ni la menor idea de cómo hacer esto sin que el programa explote.
-    //Quizá tener 2 bucles internos sea un problema, pero no se me ocurre cómo solvertarlo
+
+    //TODO
+    //Hacer lo de la colección y la comprobación de primos en esta.
     private fun findPrimeDigit(position:Int):Int {
+        //¿Se ha encotnrado el primo situado en la posición dada
+        var positionGivenPrimeFound = false;
+        //¿Es primo?
         var isPrime:Boolean = true;
+        //Posible número primo
         var possiblePM:Int = 2;
-        var counter = 1;
+        //Contador de primos
+        var counter = 0;
+        //Número Primo devuelto
         var primeNumber:Int = 1;
-        while (counter <= position){
-            for (i in 2..possiblePM / 2) {
+
+        while(!positionGivenPrimeFound){
+            isPrime = true;
+            for (i in 2..possiblePM/2) {
                 if (possiblePM % i == 0) {
                     isPrime = false;
-                    break
+                    break;
                 }
             }
-            /*var i = 2;
-            while (i <= possiblePM / 2) {
-                if (possiblePM % i == 0) {
-                    isPrime = false;
-                    break
-                }
-                i++;
-          }*/
+
             if(isPrime){
                 counter++;
-                primeNumber = possiblePM;
+                if(counter == position){
+                    primeNumber = possiblePM;
+                    positionGivenPrimeFound = true;
+                }
             }
             possiblePM++;
         }

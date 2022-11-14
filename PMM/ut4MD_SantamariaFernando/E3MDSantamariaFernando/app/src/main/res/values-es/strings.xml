@@ -6,4 +6,5 @@
     <string name="moreThanZero">Introduzca un número mayor que cero, por favor</string>
     <string name="msgOutputPt1">"El número primo que ocupa la posición "</string>
     <string name="msgOutputPt2">" es "</string>
+    <string name="moreThanTenThousand">El valor introducido es mayor de lo esperado. </string>
 </resources>

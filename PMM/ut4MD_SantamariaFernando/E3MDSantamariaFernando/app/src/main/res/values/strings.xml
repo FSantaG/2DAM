@@ -6,4 +6,5 @@
     <string name="moreThanZero">Introduce a different value, please</string>
     <string name="msgOutputPt1">"The prime number that occupies position "</string>
     <string name="msgOutputPt2">" is "</string>
+    <string name="moreThanTenThousand">Introduced value is bigger than expected</string>
 </resources>

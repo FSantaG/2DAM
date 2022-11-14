@@ -97,4 +97,5 @@
     <string name="vacio">vacio</string>
     <string name="direccion">Dirección Web no Válida</string>
     <string name="espacioVacio">Introduzca una URL válida</string>
+    <string name="llamada">Pito</string>
 </resources>

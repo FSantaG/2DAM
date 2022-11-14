@@ -47,6 +47,13 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/teal_700"/>
+
+        <Button
+            android:id="@+id/btnLlamada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/llamada"
+            style="@style/Widget.MaterialComponents.Tooltip"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
