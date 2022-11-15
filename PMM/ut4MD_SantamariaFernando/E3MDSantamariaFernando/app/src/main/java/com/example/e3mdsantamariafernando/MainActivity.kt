@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    private var primeNumbersList = mutableMapOf<Int, Int>(1 to 2);
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -75,29 +77,36 @@ class MainActivity : AppCompatActivity() {
         //¿Es primo?
         var isPrime:Boolean = true;
         //Posible número primo
-        var possiblePM:Int = 2;
+        var possiblePM:Int;
         //Contador de primos
-        var counter = 0;
+        var counter:Int;
         //Número Primo devuelto
         var primeNumber:Int = 1;
-
-        while(!positionGivenPrimeFound){
-            isPrime = true;
-            for (i in 2..possiblePM/2) {
-                if (possiblePM % i == 0) {
-                    isPrime = false;
-                    break;
+        if(primeNumbersList.containsKey(position)){
+            primeNumber = primeNumbersList[position]!!;
+        }else {
+            counter = primeNumbersList.size;
+            possiblePM = primeNumbersList[primeNumbersList.size]!!;
+            possiblePM ++;
+            while (!positionGivenPrimeFound) {
+                isPrime = true;
+                for (i in 2..possiblePM / 2) {
+                    if (possiblePM % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
                 }
-            }
 
-            if(isPrime){
-                counter++;
-                if(counter == position){
-                    primeNumber = possiblePM;
-                    positionGivenPrimeFound = true;
+                if (isPrime) {
+                    counter++;
+                    primeNumbersList.put(counter, possiblePM);
+                    if (counter == position) {
+                        primeNumber = possiblePM;
+                        positionGivenPrimeFound = true;
+                    }
                 }
+                possiblePM++;
             }
-            possiblePM++;
         }
         return primeNumber;
     }
