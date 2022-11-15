@@ -1,6 +1,8 @@
 package com.example.pruebas
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -65,6 +67,18 @@ class ScrollingActivity : AppCompatActivity() {
         binding.content.btnLlamada.setOnClickListener(){
             llamada();
         }
+
+        binding.content.grupo.addOnButtonCheckedListener {
+                group, checkedId, isChecked ->
+            binding.content.container.setBackgroundColor(
+                when (checkedId){
+                    R.id.btn1 -> Color.RED;
+                    R.id.btn2 -> Color.BLUE;
+                    else -> Color.GREEN;
+
+                }
+            );
+        }
     }
 
     private fun llamada(){
@@ -74,13 +88,35 @@ class ScrollingActivity : AppCompatActivity() {
         intent.putExtra("usuario", usuario);
         //startActivity(intent); -> //Si no se esperan resultados
         //startActivityForResult(intent, 1234); //Deprecated
-        resultadoActividad.launch(intent);
-        finish();
+        //resultadoActividad.launch(intent);
+        //finish();
+        startActivityForResult(intent, 1234)
     }
 
-    val resultadoActividad = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-        result->
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == 1234) {
+            if (resultCode == Activity.RESULT_OK) {
+                val cadena = data?.getStringExtra("nombre");
+                Toast.makeText(this, cadena, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Pito", Toast.LENGTH_LONG).show();
+            }
+        }
     }
+    /*
+    val resultadoActividad = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        resultado->
+        val datos:Intent ?= resultado.data;
+        if(resultado.resultCode == Activity.RESULT_OK){
+            val cadena = datos?.getStringExtra("nombre");
+            Toast.makeText(this, cadena, Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Pito", Toast.LENGTH_LONG).show();
+        }
+
+    }
+    */
     private fun cargarImagen(url:String="https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/games_6/nintendo_switch_7/nswitch_kirbyandtheforgottenland/KirbyAndTheForgottenLand_Intro_SideImg_Kirby.png"){
         Glide.with(this)
             .load(url)

@@ -1,5 +1,7 @@
 package com.example.pruebas
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.pruebas.databinding.ActivitySegundaActividadBinding
@@ -15,5 +17,15 @@ class SegundaActividad : AppCompatActivity() {
         binding.texto.text = URL;
 
         val usuario = intent.getParcelableExtra<Usuario>("usuario");
+        binding.btnAceptar.setOnClickListener(){
+            var i:Intent = Intent();
+            i.putExtra("nombre", "regreso");
+            setResult(Activity.RESULT_OK, i);
+            finish();
+        }
+        binding.btnCancelar.setOnClickListener(){
+            setResult((Activity.RESULT_CANCELED));
+            finish();
+        }
     }
 }
