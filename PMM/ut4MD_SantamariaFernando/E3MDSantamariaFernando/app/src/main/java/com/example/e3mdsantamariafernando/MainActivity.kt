@@ -30,15 +30,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnSearch.setOnClickListener {
             var errorMsg:String? = null;
             val inputText = binding.searchValue.text.toString();
-            if(isNumber(inputText) && inputText.toInt() != 0 && inputText.toInt() < 10000){
+            if(isNumber(inputText) && inputText.toInt() != 0){
                 errorMsg = null;
                 val primeNumber:Int = findPrimeDigit(inputText.toInt());
                 binding.output.text = getString(R.string.msgOutputPt1) + inputText + getString(R.string.msgOutputPt2) + primeNumber;
             }else if(inputText.toInt() == 0){
                 errorMsg = getString(R.string.moreThanZero);
-            }
-            else if(inputText.toInt() >= 10000){
-                errorMsg = getString(R.string.moreThanTenThousand);
             }
             else{
                 errorMsg = getString(R.string.notNumberError);
