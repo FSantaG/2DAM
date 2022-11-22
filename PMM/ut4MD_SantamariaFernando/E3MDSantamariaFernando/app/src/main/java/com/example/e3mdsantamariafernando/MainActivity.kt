@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnSearch.setOnClickListener {
             var errorMsg:String? = null;
             val inputText = binding.searchValue.text.toString();
-            if(isNumber(inputText) && inputText.toInt() != 0){
+            if(isNumber(inputText) && inputText.toInt() > 0){
                 errorMsg = null;
                 val primeNumber:Int = findPrimeDigit(inputText.toInt());
                 binding.output.text = getString(R.string.msgOutputPt1) + inputText + getString(R.string.msgOutputPt2) + primeNumber;
@@ -65,9 +65,6 @@ class MainActivity : AppCompatActivity() {
      * @param position Posición del número primo a buscas
      * @return El número primo buscado
      */
-
-    //TODO
-    //Hacer lo de la colección y la comprobación de primos en esta.
     private fun findPrimeDigit(position:Int):Int {
         //¿Se ha encotnrado el primo situado en la posición dada
         var positionGivenPrimeFound = false;
