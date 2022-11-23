@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.mjpg.usuarios.databinding.ItemUsersAltBinding
 
-class UserAdapter(private val usuarios:List<Usuario>): RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class UserAdapter(private val usuarios:List<Usuario>, private val listener:Eventos): RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
     private lateinit var context: Context;
 
@@ -24,6 +24,7 @@ class UserAdapter(private val usuarios:List<Usuario>): RecyclerView.Adapter<User
         with(holder){
             binding.tvName.text = usuarios.get(position).nombre;
             binding.tvOrder.text = usuarios.get(position).id.toString();
+            setListener(usuarios.get(position), position);
             Glide.with(context)
                 .load(usuarios.get(position).ruta)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
@@ -35,6 +36,17 @@ class UserAdapter(private val usuarios:List<Usuario>): RecyclerView.Adapter<User
     override fun getItemCount(): Int = usuarios.size;
 
     inner class ViewHolder(view:View):RecyclerView.ViewHolder(view){
-        val binding = ItemUsersAltBinding.bind(view);
+            val binding = ItemUsersAltBinding.bind(view);
+            fun setListener(usuario:Usuario, posicion:Int){
+                binding.root.setOnClickListener(){
+                    listener.pulsacionCorta(usuario, posicion);
+                }
+                binding.root.setOnLongClickListener(){
+                    listener.pulsacionLarga(posicion)
+                }
+            }
+        }
+
+
+
     }
-}

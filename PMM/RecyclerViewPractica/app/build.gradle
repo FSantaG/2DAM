@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace 'com.mjpg.usuarios'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.mjpg.usuarios"
-        minSdk 25
+        minSdk 23
         targetSdk 32
         versionCode 1
         versionName "1.0"
