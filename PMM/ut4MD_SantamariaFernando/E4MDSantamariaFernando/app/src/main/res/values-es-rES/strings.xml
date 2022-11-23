@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="reset">Reiniciar</string>
-    <string name="credits">creditos</string>
+    <string name="startGame">Empezar Nueva Partida</string>
+    <string name="welcome">¡Bienvenid@!</string>
+    <string name="play">¡A jugar!</string>
+    <string name="loseText">You Lost!</string>
+    <string name="win_text">You Won!</string>
 </resources>

@@ -1,29 +1,25 @@
 package com.example.e4mdsantamariafernando
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.example.e4mdsantamariafernando.databinding.ActivityMainBinding
-import kotlin.random.Random
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding;
-    private val words = listOf<String>("FREEZE", "MINION", "WAVE", "TOWER");
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding= ActivityMainBinding.inflate(layoutInflater);
-
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
+        val playButton: Button = findViewById(R.id.playButton)
 
-        generateWord();
-
-        binding.btnA.setOnClickListener(){
-            generateWord(); //debug cosa
+        playButton.setOnClickListener {
+            val intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
         }
-    }
-
-    public fun generateWord(){
-        var selectedWord = words[Random.nextInt(words.size)];
-
     }
 }

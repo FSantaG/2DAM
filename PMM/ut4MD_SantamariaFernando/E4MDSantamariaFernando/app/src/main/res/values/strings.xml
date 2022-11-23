@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">E4MDSantamariaFernando</string>
-    <string name="reset">Reset</string>
-    <string name="credits">credits</string>
+    <string name="startGame">Start New Game</string>
+    <string name="welcome">Welcome, new player!</string>
+    <string name="play">Let\'s play!</string>
+    <string name="loseText">You Lost!</string>
+    <string name="win_text">You Won!</string>
 </resources>
