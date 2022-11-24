@@ -7,7 +7,7 @@ class GameManager {
     private var lettersUsed: String = ""
     private lateinit var underscoreWord: String
     private lateinit var wordToGuess: String
-    private val maxTries = 7
+    private val maxTries = 6
     private var currentTries = 0
     private var drawable: Int = R.drawable.ahorcado_0
 

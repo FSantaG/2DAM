@@ -21,9 +21,11 @@ public class ej5 {
             }else{
                 FileWriter escribirArchivo = new FileWriter(fichTexto);
                 escribirArchivo.write("Esto es una prueba de escribir cadenas de caracteres en un fichero de texto");
-                escribirArchivo.write("\n");
-                escribirArchivo.write("Fernando Santamaría García");
                 escribirArchivo.close();
+                FileWriter escribirArchivo2 = new FileWriter(fichTexto, true);
+                escribirArchivo2.write("\n");
+                escribirArchivo2.write("Fernando Santamaría García");
+                escribirArchivo2.close();
             }
         }catch(Exception e){
             System.out.println("Se ha producido un error: " + e.getMessage());
