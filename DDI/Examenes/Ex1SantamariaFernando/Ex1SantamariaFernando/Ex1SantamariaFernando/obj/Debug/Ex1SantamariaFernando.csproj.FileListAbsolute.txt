@@ -1,0 +1,11 @@
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\bin\Debug\Ex1SantamariaFernando.exe.config
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\bin\Debug\Ex1SantamariaFernando.exe
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\bin\Debug\Ex1SantamariaFernando.pdb
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.csproj.AssemblyReference.cache
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.Form1.resources
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.Properties.Resources.resources
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.csproj.GenerateResource.cache
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.csproj.CoreCompileInputs.cache
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.exe
+C:\Users\dam\2DAM\DDI\Examenes\Ex1SantamariaFernando\Ex1SantamariaFernando\Ex1SantamariaFernando\obj\Debug\Ex1SantamariaFernando.pdb
