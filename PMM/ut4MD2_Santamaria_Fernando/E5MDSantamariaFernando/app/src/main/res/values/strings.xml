@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">E5MDSantamariaFernando</string>
+    <string name="dni">DNI</string>
+    <string name="required">Required</string>
+    <string name="welcome">Welcome to the register section!</string>
+    <string name="fullname">Full Name</string>
+    <string name="graduationYear">Graduation Year</string>
+    <string name="code">Specialization Code</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close app</string>
 </resources>

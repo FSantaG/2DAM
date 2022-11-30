@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dni">DNI</string>
+    <string name="required">Requerido</string>
+    <string name="welcome">¡Bienvenid@ a la sección de registro!</string>
+    <string name="fullname">Nombre y Apellidos</string>
+    <string name="graduationYear">Año de titulación</string>
+    <string name="code">Código de Especialización</string>
+    <string name="register">Registrar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar la aplicación</string>
+</resources>
