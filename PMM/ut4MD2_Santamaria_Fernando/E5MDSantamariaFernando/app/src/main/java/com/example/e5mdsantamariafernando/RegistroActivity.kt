@@ -15,7 +15,8 @@ class RegistroActivity : AppCompatActivity() {
 
         binding.btnSearch.setOnClickListener(){
             val intent = Intent(this, InformacionActivity::class.java);
-            startActivity(intent);
+            TODO("usar launch (ver página 120 del libro)");
+
         }
 
         binding.btnCancelRequest.setOnClickListener(){
