@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using capaNegocio;
+using capaEntidad;
+
 namespace Ejercicio_3___Sistema_Ventas_FSG
 {
     public partial class Login : Form
@@ -17,14 +20,36 @@ namespace Ejercicio_3___Sistema_Ventas_FSG
             InitializeComponent();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
+            //List<Usuario> TEST = new CN_Usuario().Listar();
+            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtUser.Text && u.Clave == txtPass.Text).FirstOrDefault();
+            if(ousuario != null)
+            {
+                Inicio form = new Inicio();
+                form.Show();
+                this.Hide();
 
+                form.FormClosing += frm_closing;
+                txtUser.Text = "";
+                txtPass.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Usuario erróneo o no existente", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        private void frm_closing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
         }
     }
 }

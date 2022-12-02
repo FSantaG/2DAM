@@ -1,0 +1,9 @@
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\bin\Debug\capaEntidad.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\bin\Debug\capaEntidad.pdb
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\CapaDatos\obj\Debug\CapaDatos.pdb

@@ -19,6 +19,7 @@ class WelcomeActivity : AppCompatActivity() {
             var intent = Intent(this, MainActivity::class.java);
 
             startActivity(intent);
+            finish()
         }
     }
 }

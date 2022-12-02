@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.e1mdsantamariafernando.databinding.ActivityAutorBinding
 import com.example.e1mdsantamariafernando.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -16,12 +15,12 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater);
         setContentView(binding.root)
 
-        var users = mapOf<String, String>("sa" to "1234", "usuario1" to "password1", "usuario2" to "password2");
+        var users = mapOf("sa" to "1234", "usuario1" to "password1", "usuario2" to "password2");
 
         binding.btnLogin.setOnClickListener{
             var flag = false;
-            var username:String = "";
-            var user = binding.txtUser.text.toString();
+            var username = ""
+            val user = binding.txtUser.text.toString();
             var pass = binding.txtPass.text.toString();
 
             users.forEach{registeredUser ->
@@ -41,7 +40,8 @@ class LoginActivity : AppCompatActivity() {
                 failedLogin++;
                 if(failedLogin >= 3){
                     Toast.makeText(applicationContext, getString(R.string.shutdownMessage), Toast.LENGTH_LONG).show();
-                    finishAffinity(); //Cierra la aplicación
+                    finish(); //Cierra la aplicación
+                    System.exit(0) //Cierra la aplicación por completo
                 }else {
                     Toast.makeText(
                         applicationContext,

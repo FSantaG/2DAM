@@ -1,0 +1,6 @@
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaEntidad\bin\Debug\capaEntidad.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaEntidad\bin\Debug\capaEntidad.pdb
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaEntidad\obj\Debug\capaEntidad.csproj.AssemblyReference.cache
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaEntidad\obj\Debug\capaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaEntidad\obj\Debug\capaEntidad.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaEntidad\obj\Debug\capaEntidad.pdb

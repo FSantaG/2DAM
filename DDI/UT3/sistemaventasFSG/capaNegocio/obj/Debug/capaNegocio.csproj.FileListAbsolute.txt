@@ -1,0 +1,11 @@
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\obj\Debug\capaNegocio.csproj.AssemblyReference.cache
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\obj\Debug\capaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\bin\Debug\capaNegocio.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\bin\Debug\capaNegocio.pdb
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\bin\Debug\capaEntidad.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\bin\Debug\capaEntidad.pdb
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\obj\Debug\capaNegocio.csproj.CopyComplete
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\obj\Debug\capaNegocio.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\capaNegocio\obj\Debug\capaNegocio.pdb

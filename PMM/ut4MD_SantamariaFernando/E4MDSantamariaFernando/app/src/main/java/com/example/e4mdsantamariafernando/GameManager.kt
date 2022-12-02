@@ -62,16 +62,10 @@ class GameManager {
     }
 
     private fun getHangmanDrawable(): Int {
-        return when (currentTries) {
-            0 -> R.drawable.ahorcado_0
-            1 -> R.drawable.ahorcado_1
-            2 -> R.drawable.ahorcado_2
-            3 -> R.drawable.ahorcado_3
-            4 -> R.drawable.ahorcado_4
-            5 -> R.drawable.ahorcado_5
-            6 -> R.drawable.ahorcado_6
-            else -> R.drawable.ahorcado_6
-        }
+        val lista=listOf(R.drawable.ahorcado_0,R.drawable.ahorcado_1,R.drawable.ahorcado_2,
+            R.drawable.ahorcado_3,R.drawable.ahorcado_4,
+            R.drawable.ahorcado_5,R.drawable.ahorcado_6)
+        return  lista[currentTries]
     }
 
     private fun getGameState(): GameState {

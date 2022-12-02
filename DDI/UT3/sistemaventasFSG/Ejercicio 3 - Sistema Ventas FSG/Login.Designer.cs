@@ -132,7 +132,7 @@
             this.btnIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIniciar.UseVisualStyleBackColor = false;
-            this.btnIniciar.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // btnSalir
             // 
@@ -187,6 +187,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_closing);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -82,26 +82,56 @@ class MainActivity : AppCompatActivity() {
             counter = primeNumbersList.size;
             possiblePM = primeNumbersList[primeNumbersList.size]!!;
             possiblePM ++;
-            while (!positionGivenPrimeFound) {
-                isPrime = true;
-                for (i in 2..possiblePM / 2) {
-                    if (possiblePM % i == 0) {
-                        isPrime = false;
-                        break;
-                    }
-                }
-
-                if (isPrime) {
-                    counter++;
-                    primeNumbersList.put(counter, possiblePM);
-                    if (counter == position) {
-                        primeNumber = possiblePM;
-                        positionGivenPrimeFound = true;
-                    }
-                }
-                possiblePM++;
-            }
+            primeNumber = agregar(
+                positionGivenPrimeFound,
+                isPrime,
+                possiblePM,
+                counter,
+                position,
+                primeNumber
+            )
         }
         return primeNumber;
+    }
+
+    private fun agregar(
+        positionGivenPrimeFound: Boolean,
+        isPrime: Boolean,
+        possiblePM: Int,
+        counter: Int,
+        position: Int,
+        primeNumber: Int
+    ): Int {
+        var positionGivenPrimeFound1 = positionGivenPrimeFound
+        var isPrime1 = isPrime
+        var possiblePM1 = possiblePM
+        var counter1 = counter
+        var primeNumber1 = primeNumber
+        while (!positionGivenPrimeFound1) {
+            isPrime1 = true;
+            isPrime1 = esPrimo(possiblePM1, isPrime1)
+
+            if (isPrime1) {
+                counter1++;
+                primeNumbersList.put(counter1, possiblePM1);
+                if (counter1 == position) {
+                    primeNumber1 = possiblePM1;
+                    positionGivenPrimeFound1 = true;
+                }
+            }
+            possiblePM1++;
+        }
+        return primeNumber1
+    }
+
+    private fun esPrimo(possiblePM: Int, isPrime: Boolean): Boolean {
+        var isPrime1 = isPrime
+        for (i in 2..possiblePM / 2) {
+            if (possiblePM % i == 0) {
+                isPrime1 = false;
+                break;
+            }
+        }
+        return isPrime1
     }
 }
