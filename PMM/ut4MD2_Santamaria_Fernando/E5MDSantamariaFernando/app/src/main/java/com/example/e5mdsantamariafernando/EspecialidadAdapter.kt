@@ -1,5 +1,6 @@
 package com.example.e5mdsantamariafernando
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -22,9 +23,10 @@ class EspecialidadAdapter(private val especialidades:List<Especialidad>, private
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder){
-            binding.specializationName.text = especialidades.get(position).nombre;
-            binding.specializationId.text = especialidades.get(position).code.toString();
-            setListener(especialidades.get(position), position);
+            binding.specializationName.text = especialidades[position].nombre;
+            binding.specialityVacancy.text = "Plazas: ${especialidades[position].numPlazas.toString()}";
+            binding.specializationId.text = especialidades[position].code;
+            setListener(especialidades[position], position);
         }
     }
     override fun getItemCount(): Int = especialidades.size;

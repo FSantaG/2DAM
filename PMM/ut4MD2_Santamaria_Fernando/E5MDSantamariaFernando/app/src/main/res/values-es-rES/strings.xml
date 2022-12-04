@@ -9,4 +9,6 @@
     <string name="register">Registrar</string>
     <string name="cancel">Cancelar</string>
     <string name="close">Cerrar la aplicación</string>
+    <string name="registeredUserError">El DNI introducido ya se ha registrado con anterioridad</string>
+    <string name="registeredUser">¡El usuario se ha registrado exitósamente</string>
 </resources>

@@ -9,4 +9,6 @@
     <string name="register">Register</string>
     <string name="cancel">Cancel</string>
     <string name="close">Close app</string>
+    <string name="registeredUserError">This user has been registered before</string>
+    <string name="registeredUser">User registered correctly!</string>
 </resources>
