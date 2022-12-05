@@ -11,7 +11,6 @@ import com.example.e5mdsantamariafernando.databinding.ActivityInformacionBinding
 class InformacionActivity : AppCompatActivity(), Eventos {
     private lateinit var binding: ActivityInformacionBinding;
     private lateinit var linearLayout: LinearLayoutManager;
-    //TODO: Añadir el tercer valor a las especialidades
     private var specialityList = listOf<Especialidad>(
         Especialidad("189A", "Alergología", 50),
         Especialidad("392X", "Anestesiología", 100),

@@ -15,7 +15,7 @@ class RegistroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistroBinding.inflate(layoutInflater);
-        setContentView(binding.root);
+        setContentView(binding.root)
 
         binding.btnSearch.setOnClickListener{
             calling()
@@ -29,11 +29,11 @@ class RegistroActivity : AppCompatActivity() {
         }
 
         binding.btnCancelRequest.setOnClickListener{
-            finish();
+            finish()
         }
 
         binding.btnCloseApp.setOnClickListener{
-            finishAffinity();
+            System.exit(0)
         }
 
     }
@@ -42,16 +42,16 @@ class RegistroActivity : AppCompatActivity() {
 
     val resultActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
             result ->
-        val data: Intent? = result.data;
+        val data: Intent? = result.data
         if(result.resultCode == Activity.RESULT_OK) {
-            val cadena = data?.getStringExtra("code");
+            val cadena = data?.getStringExtra("code")
             binding.txtCode.setText(data?.getStringExtra("code"))
         }
     }
 
     private fun calling(){
         val intent = Intent(this, InformacionActivity::class.java)
-        resultActivity.launch(intent);
+        resultActivity.launch(intent)
     }
 
     private fun checkValues(): Boolean {

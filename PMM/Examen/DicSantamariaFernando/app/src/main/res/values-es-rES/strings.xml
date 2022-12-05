@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login">Iniciar Sesión</string>
+    <string name="usuario">Usuario</string>
+    <string name="clave">Contraseña</string>
+    <string name="required">Requerido</string>
+    <string name="editClient">Editar Cliente</string>
+    <string name="id">DNI del Cliente</string>
+    <string name="clientName">Nombre del Cliente</string>
+    <string name="phoneNumber">Teléfono</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="save">Guardar cambios</string>
+    <string name="descartar_cambios">Descartar cambios</string>
+    <string name="goBack">Volver</string>
+    <string name="caseList">LISTA DE CASOS</string>
+    <string name="userNotCorrect">El usuario y la contraseña introducidos no coinciden</string>
+    <string name="caseEstateChanged">Estado del caso cambiado a \"Cerrado\"</string>
+    <string name="caseAlreadyClosed">El caso ya estaba cerrado</string>
+    <string name="clientNotFound">Cliente no encontrado</string>
+</resources>

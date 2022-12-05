@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DicSantamariaFernando</string>
+    <string name="login">Login</string>
+    <string name="usuario">Username</string>
+    <string name="clave">Password</string>
+    <string name="required">Required</string>
+    <string name="editClient">Edit Client</string>
+    <string name="id">Identification Code</string>
+    <string name="clientName">Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="save">Save Changes</string>
+    <string name="descartar_cambios">Scrap Changes</string>
+    <string name="goBack">Return</string>
+    <string name="caseList">CASE LIST</string>
+    <string name="userNotCorrect">User and password don\'t match. Try again.</string>
+    <string name="caseEstateChanged">Changed state to \"Closed\"</string>
+    <string name="caseAlreadyClosed">Case already closed</string>
+    <string name="clientNotFound">Client not found</string>
+</resources>
