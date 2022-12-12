@@ -1,0 +1,15 @@
+Nombre:Tallarines con verduras y salsa de soja
+Descripcion:Tallarines con pimiento y calabacin con salsa de soja
+Calorias: 650
+Precio:6.95
+----------------------------------------------------
+Nombre:Huevo fritos con patatas
+Descripcion:Dos huevos fritos con una racion de patatas fritas
+Calorias: 900
+Precio:5.95
+----------------------------------------------------
+Nombre:Sopa castellena
+Descripcion:Sopa a base de pan,huevo,pimenton y ajo
+Calorias: 950
+Precio:6.95
+----------------------------------------------------

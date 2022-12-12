@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><menu>
+    <comida>
+        <nombre>Tallarines con verduras y salsa de soja</nombre>
+        <precio>6.95</precio>
+        <descripcion>Tallarines con pimiento y calabacin con salsa de soja</descripcion>
+        <calorias>650</calorias>
+    </comida>
+    <comida>
+        <nombre>Patatas guisadas con chorizo</nombre>
+        <precio>7.95</precio>
+        <descripcion>Patatas guisadas con puerro y chorizo</descripcion>
+        <calorias>900</calorias>
+    </comida>
+    <comida>
+        <nombre>Huevos fritos con patatas</nombre>
+        <precio>5.95</precio>
+        <descripcion>Dos huevos fritos con una ración de patatas fritas</descripcion>
+        <calorias>900</calorias>
+    </comida>
+    <comida>
+        <nombre>Calabacines rellenos</nombre>
+        <precio>7.5</precio>
+        <descripcion>Medio calabacín relleno de carne picada y gratinado</descripcion>
+        <calorias>600</calorias>
+    </comida>
+    <comida>
+        <nombre>Sopa castellana</nombre>
+        <precio>6.95</precio>
+        <descripcion>Sopa a base de pan, huevo, pimentón y ajo</descripcion>
+        <calorias>950</calorias>
+    </comida>
+    <servicio>En local, en terraza y para llevar</servicio>
+</menu>

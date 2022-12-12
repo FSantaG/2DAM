@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DicAtecaAlejandro</string>
+    <string name="dni">Dni:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="correo">Correo:</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="volver">Volver</string>
+</resources>
