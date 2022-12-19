@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <nombre>Librería Pete Cander</nombre>
+    <libros>
+        <libro isbn="1234567890">
+            <titulo>Mein Kumph</titulo>
+            <autor>Adolfo, el Curandero</autor>
+        </libro>
+        <libro isbn="9876543210">
+            <titulo>Esa maldita pared</titulo>
+            <autor>El Flako</autor>
+        </libro>
+        <libro isbn="0123456781">
+            <titulo>Yo, Gamer</titulo>
+            <autor>Jorge "Werlyb" Casanovas</autor>
+        </libro>
+    </libros>
+</libreria>
+
