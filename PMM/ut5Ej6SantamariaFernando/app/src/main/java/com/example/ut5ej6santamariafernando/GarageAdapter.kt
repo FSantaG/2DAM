@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ut5ej6santamariafernando.databinding.ListaEncargosBinding
 
 class GarageAdapter(private val coches:List<Coche>, private val listener:Eventos): RecyclerView.Adapter<GarageAdapter.ViewHolder>() {
 
@@ -19,28 +20,29 @@ class GarageAdapter(private val coches:List<Coche>, private val listener:Eventos
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder){
-            binding.codigoCaso.text = caso.get(position).codigo
-            binding.denominacion.text = caso.get(position).denominacion
-            binding.dniCliente.text = caso.get(position).dniCliente
-            if(caso.get(position).estado){
-                binding.caso.setBackgroundColor(Color.RED)
+            binding.nombreCompleto.text = coches.get(position).obtenerNombreCompleto()
+            binding.matricula.text = coches.get(position).matricula
+            binding.modeloCoche.text = coches.get(position).modeloCoche
+            if(coches.get(position).estado){
+                binding.coche.setBackgroundColor(Color.GREEN)
             }else{
-                binding.caso.setBackgroundColor(Color.GREEN)
+                binding.coche.setBackgroundColor(Color.RED)
             }
 
-            setListener(caso.get(position), position)
+            setListener(coches.get(position), position)
         }
     }
-    override fun getItemCount(): Int = caso.size;
+    override fun getItemCount(): Int = coches.size;
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val binding = CasosDisponiblesBinding.bind(view);
-        fun setListener(caso:Caso, posicion:Int){
+        val binding = ListaEncargosBinding.bind(view);
+        fun setListener(coches:Coche, posicion:Int){
             binding.root.setOnClickListener(){
-                listener.pulsacionCorta(caso, posicion);
+                listener.pulsacionCorta(coches, posicion);
             }
             binding.root.setOnLongClickListener(){
                 listener.pulsacionLarga(posicion)
+
             }
         }
     }

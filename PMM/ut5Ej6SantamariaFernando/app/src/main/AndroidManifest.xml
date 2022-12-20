@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Ut5Ej6SantamariaFernando"
         tools:targetApi="31">
         <activity
+            android:name=".AgregarCocheActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".GarajeActivity"
             android:exported="false">
             <meta-data

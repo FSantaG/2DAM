@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ut5Ej6SantamariaFernando</string>
-    <string name="addCar">Add Car</string>
+    <string name="addCar">Añadir Coche</string>
     <string name="idClient">DNI Cliente</string>
     <string name="required">Required</string>
     <string name="remark">Remarks</string>

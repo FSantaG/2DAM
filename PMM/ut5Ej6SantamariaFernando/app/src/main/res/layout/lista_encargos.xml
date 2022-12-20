@@ -11,48 +11,48 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/caso"
+        android:id="@+id/coche"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         tools:background="@android:color/holo_red_light"
         >
 
         <TextView
-            android:id="@+id/denominacion"
+            android:id="@+id/nombreCompleto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-             />
+            app:layout_constraintVertical_bias="0.551"
+            tools:text="Manolo Pérez" />
 
         <TextView
-            android:id="@+id/codigoCaso"
+            android:id="@+id/matricula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toEndOf="@+id/denominacion"
+            app:layout_constraintStart_toEndOf="@+id/modeloCoche"
             app:layout_constraintTop_toTopOf="parent"
-             />
+            app:layout_constraintVertical_bias="0.486"
+            tools:text="1234BCD" />
 
         <TextView
-            android:id="@+id/dniCliente"
+            android:id="@+id/modeloCoche"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/denominacion"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nombreCompleto"
             app:layout_constraintTop_toTopOf="parent"
-             />
-
-
+            app:layout_constraintVertical_bias="0.486"
+            tools:text="Seat Ibiza" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
