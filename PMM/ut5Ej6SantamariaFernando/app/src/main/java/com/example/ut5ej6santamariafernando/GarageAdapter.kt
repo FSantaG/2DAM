@@ -23,6 +23,8 @@ class GarageAdapter(private val coches:List<Coche>, private val listener:Eventos
             binding.nombreCompleto.text = coches.get(position).obtenerNombreCompleto()
             binding.matricula.text = coches.get(position).matricula
             binding.modeloCoche.text = coches.get(position).modeloCoche
+            binding.fechaEntrega.text = coches.get(position).fechaEntrega
+            binding.dni.text = coches.get(position).dni
             if(coches.get(position).estado){
                 binding.coche.setBackgroundColor(Color.GREEN)
             }else{

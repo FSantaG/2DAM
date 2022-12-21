@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/coche"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="80dp"
         tools:background="@android:color/holo_red_light"
         >
 
@@ -21,39 +21,77 @@
             android:id="@+id/nombreCompleto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
+            android:layout_marginStart="48dp"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.551"
+            app:layout_constraintVertical_bias="0.301"
             tools:text="Manolo Pérez" />
+
+        <TextView
+            android:id="@+id/dni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombreCompleto"
+            app:layout_constraintVertical_bias="0.294"
+            tools:text="12345678X" />
 
         <TextView
             android:id="@+id/matricula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="12dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/modeloCoche"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.486"
+            app:layout_constraintVertical_bias="0.163"
             tools:text="1234BCD" />
 
         <TextView
             android:id="@+id/modeloCoche"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/nombreCompleto"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.486"
+            app:layout_constraintVertical_bias="0.163"
             tools:text="Seat Ibiza" />
 
+        <TextView
+            android:id="@+id/entrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="@string/est"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.633"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modeloCoche"
+            tools:text="Entrega:" />
+
+        <TextView
+            android:id="@+id/fechaEntrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="19dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/entrega"
+            tools:text="01/01/2021" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

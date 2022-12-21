@@ -8,12 +8,13 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ut5ej6santamariafernando.databinding.ActivityGarajeBinding
+import com.google.android.material.snackbar.Snackbar
 
 class GarajeActivity : AppCompatActivity(), Eventos {
 
     private lateinit var binding:ActivityGarajeBinding
     private lateinit var linearLayout:LinearLayoutManager
-    private var listaCoches = mutableListOf<Coche>(
+    private var listaCoches = arrayListOf<Coche>(
         Coche("12345678X", "Manolo", "Pérez", "prueba@prueba.com", "1234XDD",
         "Seat Ibiza", "19/12/2022", "Coche de prueba", true),
         Coche("87654321X", "Pedro", "Gómez", "prueba@prueba.com", "1234XDD",
@@ -40,8 +41,6 @@ class GarajeActivity : AppCompatActivity(), Eventos {
 
         binding.btnCrearRegistro.setOnClickListener {
             val intent = Intent(this, AgregarCocheActivity::class.java)
-            val listaCochesForResult = Lista(listaCoches)
-            intent.putExtra("listaCoches", listaCochesForResult)
             resultActivity.launch(intent)
         }
     }
@@ -50,7 +49,11 @@ class GarajeActivity : AppCompatActivity(), Eventos {
             result ->
         val data: Intent? = result.data
         if(result.resultCode == Activity.RESULT_OK) {
-
+            var nuevoCoche = data?.getParcelableExtra<Coche>("nuevoCoche")
+            if (nuevoCoche != null) {
+                listaCoches.add(nuevoCoche)
+            }
+            binding.recyclerview.adapter?.notifyDataSetChanged()
         }
     }
 

@@ -17,6 +17,7 @@
             android:gravity="center_horizontal"
             android:textColor="@color/black"
             android:textSize="30sp"
+            android:text="@string/addCar"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Agregar Coche" />
 
@@ -38,16 +39,32 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nombreCompleto"
+            android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/fullName"
+            android:hint="@string/name"
             app:endIconMode="clear_text"
             app:helperText="@string/required"
             app:layout_constraintTop_toBottomOf="@+id/dniCliente">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/"
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/apellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/surname"
+            app:endIconMode="clear_text"
+            app:helperText="@string/required"
+            app:layout_constraintTop_toBottomOf="@+id/nombre">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtApellidos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text" />
@@ -60,12 +77,13 @@
             android:hint="@string/email"
             app:endIconMode="clear_text"
             app:helperText="@string/required"
-            app:layout_constraintTop_toBottomOf="@+id/nombreCompleto">
+            app:layout_constraintTop_toBottomOf="@+id/apellidos">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="text" />
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -78,6 +96,7 @@
             app:layout_constraintTop_toBottomOf="@+id/email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMatricula"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text" />
@@ -93,25 +112,73 @@
             app:layout_constraintTop_toBottomOf="@+id/matricula">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtModelo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/fechaEntrega"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/delivery"
-            app:endIconMode="clear_text"
-            app:helperText="@string/required"
             app:layout_constraintTop_toBottomOf="@+id/modeloCoche">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:hint="@string/day"
+                app:endIconMode="clear_text"
+                app:helperText="@string/required"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="datetime" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:hint="@string/month"
+                app:endIconMode="clear_text"
+                app:helperText="@string/required"
+                app:layout_constraintStart_toEndOf="@+id/dia"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtMes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="datetime" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/anno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:hint="@string/year"
+                app:endIconMode="clear_text"
+                app:helperText="@string/required"
+                app:layout_constraintStart_toEndOf="@+id/mes"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtAnno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="datetime" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/observaciones"
@@ -123,6 +190,7 @@
             app:layout_constraintTop_toBottomOf="@+id/fechaEntrega">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtObservaciones"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text" />
@@ -132,19 +200,23 @@
             android:id="@+id/btnGuardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@color/black"
+            android:text="@string/save"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/observaciones"
-            android:textColor="@color/black"
-            android:backgroundTint="@android:color/holo_blue_dark"
             tools:text="Guardar" />
 
         <Button
             android:id="@+id/btnCancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="@string/cancel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/observaciones"
-            android:backgroundTint="@android:color/holo_red_dark"
             tools:text="Cancelar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

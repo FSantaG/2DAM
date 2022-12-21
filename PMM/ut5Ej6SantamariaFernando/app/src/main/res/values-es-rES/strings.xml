@@ -4,9 +4,16 @@
     <string name="idClient">DNI Cliente</string>
     <string name="required">Required</string>
     <string name="remark">Remarks</string>
-    <string name="delivery">Delivery Date</string>
     <string name="carModel">Car Model</string>
     <string name="plateNumber">Plate Number</string>
     <string name="email">E-Mail</string>
     <string name="fullName">Full Name</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="est">Entrega:</string>
+    <string name="day">Day</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
 </resources>
