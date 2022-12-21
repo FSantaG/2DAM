@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<biblioteca>
+    <juegos>
+        <juego id="1">
+            <nombre>Rocket League</nombre>
+            <desarrolladora>Psyonix</desarrolladora>
+            <fecha_salida>2013</fecha_salida>
+        </juego>
+        <juego id="2">
+            <nombre>Killing Floor 2</nombre>
+            <desarrolladora>Tripwire Interactive</desarrolladora>
+            <fecha_salida>2016</fecha_salida>
+        </juego>
+        <juego id="3">
+            <nombre>Borderlands 2</nombre>
+            <desarrolladora>Gearbox</desarrolladora>
+            <fecha_salida>2012</fecha_salida>
+        </juego>
+    </juegos>
+</biblioteca>

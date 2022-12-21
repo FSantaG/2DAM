@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <juegos>
+        <juego id="1">
+            <nombre>Rocket League</nombre>
+            <desarrolladora>Psyonix</desarrolladora>
+            <fecha_salida>2013</fecha_salida>
+        </juego>
+        <juego id="2">
+            <nombre>Geometry Dash</nombre>
+            <desarrolladora>RobTop</desarrolladora>
+            <fecha_salida>2009</fecha_salida>
+        </juego>
+        <juego id="3">
+            <nombre>The Binding of Isaac:Rebirth</nombre>
+            <desarrolladora>Nicalis | Edmund McMillen</desarrolladora>
+            <fecha_salida>2014</fecha_salida>
+        </juego>
+        <juego id="4">
+            <nombre>PayDay 2</nombre>
+            <desarrolladora>Overkill</desarrolladora>
+            <fecha_salida>2014</fecha_salida>
+        </juego>
+    </juegos>
+</biblioteca>
+
