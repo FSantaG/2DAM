@@ -16,4 +16,10 @@
     <string name="day">Day</string>
     <string name="year">Year</string>
     <string name="month">Month</string>
+    <string name="shipmentDate">Shipment Date</string>
+    <string name="loginService">Login Service</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="emailMessage">De parte de Talleres Pete Cander, es de mi agrad informar de que su coche ya está listo para su recogida. Puede pasar a buscarlo en cualquier momento. \n Gracias por confiar en nosotros</string>
 </resources>

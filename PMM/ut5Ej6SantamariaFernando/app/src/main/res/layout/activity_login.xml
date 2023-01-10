@@ -16,11 +16,11 @@
         android:gravity="center_horizontal"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="40sp"
+        android:text="Talleres Pete Cander"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Taller Pete Cander" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/subTitle"
@@ -29,6 +29,7 @@
         android:gravity="center_horizontal"
         android:textColor="@android:color/holo_red_light"
         android:textSize="25sp"
+        android:text="@string/loginService"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreTaller"
@@ -47,9 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Usuario"
+            android:hint="@string/user"
             app:endIconMode="clear_text"
-            app:helperText="Requerido"
+            app:helperText="@string/required"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -63,9 +64,9 @@
             android:id="@+id/clave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Clave"
+            android:hint="@string/password"
             app:endIconMode="password_toggle"
-            app:helperText="Requerido"
+            app:helperText="@string/required"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/usuario">
 
@@ -84,6 +85,7 @@
         android:layout_marginTop="24dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:textColor="@android:color/white"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datosLayout"

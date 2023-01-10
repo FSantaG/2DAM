@@ -23,34 +23,58 @@ class AgregarCocheActivity : AppCompatActivity() {
                     Snackbar.LENGTH_SHORT)
                     .show()
             }else{
-                val fecha = binding.txtDia.text.toString() + "/" +
-                        binding.txtMes.text.toString() + "/" +
-                        binding.txtAnno.text.toString()
-                val nuevoCoche = Coche(binding.txtDNI.text.toString(),
-                    binding.txtNombre.text.toString(),
-                    binding.txtApellidos.text.toString(),
-                    binding.txtEmail.text.toString(),
-                    binding.txtMatricula.text.toString(),
-                    binding.txtModelo.text.toString(),
-                    fecha,
-                    binding.txtObservaciones.text.toString(),
-                    false)
-                var cocheResult:Intent = Intent()
-                cocheResult.putExtra("nuevoCoche", nuevoCoche)
-                setResult(Activity.RESULT_OK, cocheResult)
-                finish()
+                val listaAComprobar = intent.getParcelableExtra<ListaCoches>("lista")
+                if (listaAComprobar != null) {
+                    if(!checkPlateNumber(listaAComprobar)){
+                        generateNewCar()
+                    }else{
+                        binding.txtMatricula.setError("Matrícula ya usada en otra reserva")
+                    }
+                }
+
             }
         }
 
         binding.btnCancelar.setOnClickListener {
-            var nuevaLista:Intent = Intent()
+            val nuevaLista = Intent()
             setResult(Activity.RESULT_CANCELED, nuevaLista)
             finish()
         }
     }
 
-    public fun checkNulls():Boolean{
-        var flag = false;
+    private fun checkPlateNumber(listaAComprobar:ListaCoches):Boolean{
+        var flag = false
+        for (coche in listaAComprobar.lista) {
+            if (coche.matricula == binding.txtMatricula.text.toString()) {
+                flag = true
+            }
+        }
+        return flag
+    }
+
+    private fun generateNewCar() {
+        val fecha = binding.txtDia.text.toString() + "/" +
+                binding.txtMes.text.toString() + "/" +
+                binding.txtAnno.text.toString()
+        val nuevoCoche = Coche(
+            binding.txtDNI.text.toString(),
+            binding.txtNombre.text.toString(),
+            binding.txtApellidos.text.toString(),
+            binding.txtEmail.text.toString(),
+            binding.txtMatricula.text.toString(),
+            binding.txtModelo.text.toString(),
+            fecha,
+            binding.txtObservaciones.text.toString(),
+            false
+        )
+        val cocheResult = Intent()
+        cocheResult.putExtra("nuevoCoche", nuevoCoche)
+        setResult(RESULT_OK, cocheResult)
+        finish()
+    }
+
+    private fun checkNulls():Boolean{
+        var flag = false
         if(binding.txtDNI.text.toString() != "" &&
             binding.txtEmail.text.toString() != "" &&
             binding.txtDia.text.toString() != "" &&
@@ -64,9 +88,5 @@ class AgregarCocheActivity : AppCompatActivity() {
             flag = true
         }
         return flag
-    }
-
-    public fun debug(){
-        Snackbar.make(binding.root, "Pito", Snackbar.LENGTH_SHORT).show()
     }
 }

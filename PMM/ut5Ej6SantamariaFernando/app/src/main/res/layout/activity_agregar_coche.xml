@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".AgregarCocheActivity">
+    tools:context=".AgregarCocheActivity"
+    android:background="@android:color/holo_blue_light">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textColor="@color/black"
+            android:textColor="@android:color/holo_red_light"
             android:textSize="30sp"
             android:text="@string/addCar"
             app:layout_constraintTop_toTopOf="parent"
@@ -124,6 +125,18 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/modeloCoche">
 
+            <TextView
+                android:id="@+id/fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="20sp"
+                android:text="@string/shipmentDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Fecha de Entrega" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dia"
                 android:layout_width="wrap_content"
@@ -133,7 +146,7 @@
                 app:endIconMode="clear_text"
                 app:helperText="@string/required"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/fecha">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtDia"
@@ -151,7 +164,7 @@
                 app:endIconMode="clear_text"
                 app:helperText="@string/required"
                 app:layout_constraintStart_toEndOf="@+id/dia"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/fecha">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtMes"
@@ -169,7 +182,7 @@
                 app:endIconMode="clear_text"
                 app:helperText="@string/required"
                 app:layout_constraintStart_toEndOf="@+id/mes"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/fecha">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtAnno"
