@@ -1,0 +1,11 @@
+Trabajr sólo con el emulador. El móvil no funciona
+
+Para acceder a las bases de datos creadas, 
+acceder a Device File Explorer, y seguir la siguiente ruta:
+
+data > data > com.[nombre del paquete] > databases
+
+Tienen que aparecer 2 como mínimo.
+
+Hay que apagar la aplicación antes de poder descargar la base de datos
+
