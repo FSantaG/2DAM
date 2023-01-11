@@ -32,3 +32,6 @@ C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\bin\
 C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\bin\Debug\capaNegocio.pdb
 C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\bin\Debug\CapaDatos.pdb
 C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\capaPresentacion.csproj.CopyComplete
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmProducto.resources
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmProveedores.resources
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmUsuarios.resources
