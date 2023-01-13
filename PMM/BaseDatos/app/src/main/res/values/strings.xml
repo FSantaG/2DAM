@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Bases de Datos</string>
+    <string name="inicio">Validar</string>
+    <string name="requerido">Requerido</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="usuario">Usuario</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="regresar">Regresar</string>
+    <string name="codigo">CÓDIGO</string>
+    <string name="denominacion">DENOMINACIÓN</string>
+    <string name="direccion">DIRECCIÓN</string>
+    <string name="provincia">PROVINCIA</string>
+    <string name="cargadores">CARGADORES</string>
+    <string name="indicaciones">INDICACIONES</string>
+    <string name="precio">PRECIO DE CARGA</string>
+    <string name="tipo">TIPO DE ESTABLECIMIENTO</string>
+    <string name="alta_puntos_de_recarga">ALTA PUNTOS DE RECARGA</string>
+</resources>

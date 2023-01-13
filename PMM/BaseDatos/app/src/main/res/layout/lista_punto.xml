@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/common_padding_min"
+    android:layout_marginEnd="@dimen/common_padding_min"
+    android:layout_marginTop="@dimen/common_padding_min">
+
+
+
+    <!-- el equipo de google recomienda para cuando tenemos una imagen y una sola linea
+    una altura de 56dp para altura del padre-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height"
+        android:id="@+id/contenedor"
+        >
+        <!-- tools :text  unicamente este texto se va a ver en tiempo de desarrollo
+        esto significa que cuando se compile esta propiedad no va ir en el app final
+        -->
+
+        <!-- textAparenceCaption esta recomendado para subtitulos o
+        pequeñas referencias-->
+        <TextView
+            android:id="@+id/txtEsta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Tipo de Establecimiento"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:layout_marginEnd="@dimen/common_padding_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <!-- cuando queremos poner un subtitulo pero que resalte mas
+        ponemos textApparenceSubtitle1 o 2-->
+        <TextView
+            android:id="@+id/txtDenominacion"
+            android:layout_width="0dp"
+            tools:text="Denominacion"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:layout_marginHorizontal="@dimen/common_padding_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtEsta"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/txtDir"
+            android:layout_width="0dp"
+            tools:text="DIRECCION"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:layout_marginHorizontal="@dimen/common_padding_default"
+            app:layout_constraintTop_toBottomOf="@id/txtEsta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/txtPro"
+            android:layout_width="0dp"
+            tools:text="PROVINCIA"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:layout_marginHorizontal="@dimen/common_padding_default"
+            app:layout_constraintTop_toBottomOf="@id/txtDir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

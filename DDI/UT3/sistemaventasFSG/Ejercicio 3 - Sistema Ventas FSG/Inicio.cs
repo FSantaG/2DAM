@@ -29,7 +29,7 @@ namespace Ejercicio_3___Sistema_Ventas_FSG
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.idUsuario);
+            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
             foreach(IconMenuItem iconmenu in menu.Items)
             {
                 bool encontrado = ListaPermisos.Any(m => m.NombreMenu == iconmenu.Name);
@@ -40,7 +40,7 @@ namespace Ejercicio_3___Sistema_Ventas_FSG
                 }
             }
 
-            lblusuario.Text = usuarioActual.nombreCompleto;
+            lblusuario.Text = usuarioActual.NombreCompleto;
         }
 
         private void menuUsuarios_Click(object sender, EventArgs e)

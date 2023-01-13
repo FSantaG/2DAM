@@ -23,7 +23,7 @@ namespace Ejercicio_3___Sistema_Ventas_FSG
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             //List<Usuario> TEST = new CN_Usuario().Listar();
-            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.documento == txtUser.Text && u.clave == txtPass.Text).FirstOrDefault();
+            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtUser.Text && u.Clave == txtPass.Text).FirstOrDefault();
             if(ousuario != null)
             {
                 Inicio form = new Inicio(ousuario);

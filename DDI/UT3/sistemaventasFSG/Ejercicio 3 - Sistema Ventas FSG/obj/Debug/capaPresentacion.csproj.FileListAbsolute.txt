@@ -35,3 +35,6 @@ C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\
 C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmProducto.resources
 C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmProveedores.resources
 C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmUsuarios.resources
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\bin\Debug\aa-ER\Ejercicio 3 - Sistema Ventas FSG.resources.dll
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\Ejercicio_3___Sistema_Ventas_FSG.frmUsuarios.aa-ER.resources
+C:\Users\dam\2DAM\DDI\UT3\sistemaventasFSG\Ejercicio 3 - Sistema Ventas FSG\obj\Debug\aa-ER\Ejercicio 3 - Sistema Ventas FSG.resources.dll
