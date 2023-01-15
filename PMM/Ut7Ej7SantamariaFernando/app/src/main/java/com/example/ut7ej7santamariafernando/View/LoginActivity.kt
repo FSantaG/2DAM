@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ut7ej7santamariafernando.DB_Ops.DBQueries
+import com.example.ut7ej7santamariafernando.Model.AluProf
+import com.example.ut7ej7santamariafernando.Model.Alumno
+import com.example.ut7ej7santamariafernando.Model.Faltas
+import com.example.ut7ej7santamariafernando.Model.Profesor
 import com.example.ut7ej7santamariafernando.MyDBOpenHelper
 import com.example.ut7ej7santamariafernando.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
@@ -65,18 +69,47 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun altaAlumnos() {
-
+        val alumnoPrueba1 = Alumno(
+            null,"José"
+        )
+        val alumnoPrueba2 = Alumno(
+            null, "María"
+        )
+        Thread {
+            bd.addAlumno(alumnoPrueba1)
+            bd.addAlumno(alumnoPrueba2)
+        }.start()
     }
 
     private fun altaProfesores() {
-
+        val profPrueba1 = Profesor(
+            "12345678A", "plopezg", "123", "Pedro López"
+        )
+        val profPrueba2 = Profesor(
+            "12345678Z", "ljimenezr", "123", "Laura Jimenez Ruiz"
+        )
+        Thread {
+            bd.addProfesor(profPrueba1)
+            bd.addProfesor(profPrueba2)
+        }.start()
     }
 
     private fun altaFaltas() {
+    val faltaPrueba = Faltas(
+        null, 1, "13/01/2023", 2, 1, 0, "Se quedó dormido"
+    )
 
+        Thread {
+            bd.addFalta(faltaPrueba)
+        }.start()
     }
 
     private fun altaAluProf() {
-
+    val aluProfPrueba = AluProf(
+        null, 1, 1
+    )
+        Thread {
+            bd.addAluProf(aluProfPrueba)
+        }.start()
     }
 }
