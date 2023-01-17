@@ -14,7 +14,7 @@ class MyDBOpenHelper(
 
         companion object {
             val DATABASE_VERSION = 1
-            val DATABASE_NAME = "Ut7Ej7SantamariaFernando.db"
+            val DATABASE_NAME = "CENTRO.db"
 
             val TABLA_ALUMNOS = "alumnos"
             val COL_ALU_CODIGOALUMNO = "cod_alumno"
@@ -26,7 +26,7 @@ class MyDBOpenHelper(
             val COL_PROF_CONTRA = "clave"
             val COL_PROF_NOMBREPROFESOR = "nombre_profesor"
 
-            val TABLA_FALTAS = "faltas-alumno"
+            val TABLA_FALTAS = "faltasAlumno"
             val COL_FAL_CODIGO = "codigo"
             val COL_FAL_CODIGOALUMNO = COL_ALU_CODIGOALUMNO
             val COL_FAL_FECHA = "fecha"
@@ -35,7 +35,7 @@ class MyDBOpenHelper(
             val COL_FAL_JUSTIFICADA = "justificada"
             val COL_FAL_OBSERVACIONES = "observaciones"
 
-            val TABLA_ALUPROF = "profesor-alumno"
+            val TABLA_ALUPROF = "profesorAlumno"
             val COL_ALPR_CODIGO = "codigo"
             val COL_ALPR_CODIGOALUMNO = COL_ALU_CODIGOALUMNO
             val COL_ALPR_CODIGOPROFESOR = COL_FAL_CODIGOPROFE
@@ -62,7 +62,7 @@ class MyDBOpenHelper(
                         "$COL_FAL_CODIGOALUMNO INTEGER NOT NULL," +
                         "$COL_FAL_FECHA TEXT NOT NULL," +
                         "$COL_FAL_HORA INTEGER NOT NULL CHECK($COL_FAL_HORA >= 1 AND $COL_FAL_HORA <= 6)," +
-                        "$COL_FAL_CODIGOPROFE INTEGER NOT NULL," +
+                        "$COL_FAL_CODIGOPROFE TEXT NOT NULL," +
                         "$COL_FAL_JUSTIFICADA INTEGER NOT NULL CHECK($COL_FAL_JUSTIFICADA < 2 AND $COL_FAL_JUSTIFICADA > -1)," +
                         "$COL_FAL_OBSERVACIONES TEXT," +
                         "FOREIGN KEY($COL_FAL_CODIGOALUMNO) REFERENCES $TABLA_ALUMNOS($COL_ALU_CODIGOALUMNO)," +
@@ -72,7 +72,7 @@ class MyDBOpenHelper(
                 "CREATE TABLE $TABLA_ALUPROF (" +
                         "$COL_ALPR_CODIGO INTEGER," +
                         "$COL_ALPR_CODIGOALUMNO INTEGER," +
-                        "$COL_ALPR_CODIGOPROFESOR INTEGER," +
+                        "$COL_ALPR_CODIGOPROFESOR TEXT," +
                         "FOREIGN KEY($COL_ALPR_CODIGOPROFESOR) REFERENCES $TABLA_PROFESOR($COL_PROF_DNIPROF)," +
                         "FOREIGN KEY($COL_ALPR_CODIGOALUMNO) REFERENCES $TABLA_ALUMNOS($COL_ALU_CODIGOALUMNO)," +
                         "PRIMARY KEY($COL_ALPR_CODIGO AUTOINCREMENT)" +

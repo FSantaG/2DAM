@@ -95,9 +95,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun altaFaltas() {
-    val faltaPrueba = Faltas(
-        null, 1, "13/01/2023", 2, 1, 0, "Se quedó dormido"
-    )
+        val faltaPrueba = Faltas(
+        null, 1, "13/01/2023", 2, "12345678A", 0, "Se quedó dormido"
+        )
 
         Thread {
             bd.addFalta(faltaPrueba)
@@ -105,9 +105,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun altaAluProf() {
-    val aluProfPrueba = AluProf(
-        null, 1, 1
-    )
+        val aluProfPrueba = AluProf(
+        null, 1, "12345678A"
+        )
         Thread {
             bd.addAluProf(aluProfPrueba)
         }.start()
