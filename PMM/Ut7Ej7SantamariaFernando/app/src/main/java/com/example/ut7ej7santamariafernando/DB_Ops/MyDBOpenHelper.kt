@@ -51,7 +51,7 @@ class MyDBOpenHelper(
                         "PRIMARY KEY($COL_ALU_CODIGOALUMNO AUTOINCREMENT)" +
                         ")",
                 "CREATE TABLE $TABLA_PROFESOR (" +
-                        "$COL_PROF_DNIPROF TEXT," +
+                        "$COL_PROF_DNIPROF TEXT NOT NULL," +
                         "$COL_PROF_USUARIO TEXT," +
                         "$COL_PROF_CONTRA TEXT," +
                         "$COL_PROF_NOMBREPROFESOR TEXT," +

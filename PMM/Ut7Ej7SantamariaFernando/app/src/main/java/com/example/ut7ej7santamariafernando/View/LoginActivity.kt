@@ -13,6 +13,10 @@ import com.example.ut7ej7santamariafernando.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
+    /**
+     * Si casca la aplicación, o vuelve a salir lo del virtual method ese raro,
+     * Realizar un clear y un rebuild (se encuentran en la pestaña Build)
+     */
     private lateinit var binding: ActivityLoginBinding
     private lateinit var bd:DBQueries
 
