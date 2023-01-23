@@ -62,12 +62,8 @@ class LoginActivity : AppCompatActivity() {
                         Snackbar.LENGTH_SHORT
                     ).show()
                 } else {
-                    Snackbar.make(
-                        binding.root, "Usuario encontrado. Esto funciona",
-                        Snackbar.LENGTH_SHORT
-                    ).show()
-                    //val intent = Intent(this, Consulta::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(this, Alumnos::class.java)
+                    startActivity(intent)
                 }
             }
     }

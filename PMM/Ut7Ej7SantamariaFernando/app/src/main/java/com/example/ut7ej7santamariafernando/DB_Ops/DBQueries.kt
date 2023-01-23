@@ -32,8 +32,29 @@ class DBQueries(contexto:Context) {
         mBD.insert(MyDBOpenHelper.TABLA_ALUMNOS, null, values)
     }
 
-    fun getAlumno(){
-     TODO()
+    fun getAlumno(codigoProfesor:String) : MutableList<Alumno>{
+        var alumnos: MutableList<Alumno> = ArrayList()
+        val cursor: Cursor = mBD.rawQuery(
+            "SELECT * FROM ${MyDBOpenHelper.TABLA_ALUMNOS} " +
+                    "WHERE ${MyDBOpenHelper.COL_ALU_CODIGOALUMNO} IN (" +
+                    "SELECT ${MyDBOpenHelper.COL_ALU_CODIGOALUMNO} FROM ${MyDBOpenHelper.TABLA_ALUMNOS} " +
+                    "WHERE ${MyDBOpenHelper.COL_ALPR_CODIGOPROFESOR} = ${codigoProfesor})'",
+            null
+        )
+        if (cursor.moveToFirst()) {
+            do{
+                alumnos.add(
+                    Alumno(
+                        cursor.getInt(cursor.getColumnIndexOrThrow(MyDBOpenHelper.COL_ALU_CODIGOALUMNO)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(MyDBOpenHelper.COL_ALU_NOMBRE))
+                    )
+                )
+            } while (cursor.moveToNext())
+        }
+        if (!cursor.isClosed) {
+            cursor.close()
+        }
+        return alumnos
     }
 
     fun addProfesor(profesor: Profesor){

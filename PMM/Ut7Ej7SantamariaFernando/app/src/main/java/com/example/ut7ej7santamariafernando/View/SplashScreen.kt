@@ -12,6 +12,12 @@ import com.example.ut7ej7santamariafernando.MyDBOpenHelper
 import com.example.ut7ej7santamariafernando.databinding.ActivitySplashScreenBinding
 
 class SplashScreen : AppCompatActivity() {
+
+    /**
+     * El programa explota si se trabaj desde otros ordenadores (no sé si es culpa de Github o qué)
+     * Si eso sucediese, hacer un clean y un rebuild (En el caso de que el error obtenido sea "No virtual method getProfesor()I)
+     */
+
     private lateinit var binding: ActivitySplashScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

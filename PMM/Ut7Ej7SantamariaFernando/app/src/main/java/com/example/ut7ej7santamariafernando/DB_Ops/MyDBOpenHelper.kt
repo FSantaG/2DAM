@@ -14,7 +14,7 @@ class MyDBOpenHelper(
 
         companion object {
             val DATABASE_VERSION = 1
-            val DATABASE_NAME = "CENTRO.db"
+            val DATABASE_NAME = "ut7ej7SantamariaFernando.db"
 
             val TABLA_ALUMNOS = "alumnos"
             val COL_ALU_CODIGOALUMNO = "cod_alumno"
