@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="usuarios">
+        <item>mj*123*A</item>
+        <item>fsantag*123*U</item>
+        <item>h*h*U</item>
+    </string-array>
 </resources>
