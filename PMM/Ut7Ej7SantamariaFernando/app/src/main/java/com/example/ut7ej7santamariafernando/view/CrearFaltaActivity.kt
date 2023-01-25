@@ -19,10 +19,13 @@ class CrearFaltaActivity : AppCompatActivity() {
     private lateinit var fecha:String
     private lateinit var falta: Faltas
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        bd = DBQueries(this)
         binding = ActivityCrearFaltaBinding.inflate(layoutInflater)
+        fecha = ""
+
         setContentView(binding.root)
 
         insertarFecha()
@@ -30,38 +33,64 @@ class CrearFaltaActivity : AppCompatActivity() {
         binding.btnGuardar.setOnClickListener{
             guardar()
         }
+
+        binding.btnCancelar.setOnClickListener{
+            finish()
+        }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun guardar() {
         val codAlumno =binding.txtCodAlumno.text.toString()
         val hora = binding.txtHora.text.toString()
         val observaciones = binding.txtObservaciones.text.toString()
         val codProfesor = intent.getStringExtra("dniProf")
 
-        val fechaActual = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
-        val fechaAhora = LocalDate.parse(fechaActual, DateTimeFormatter.ofPattern("d-M-y"))
+        val fechaActual = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+        val fechaAhora = LocalDate.parse(fechaActual, DateTimeFormatter.ofPattern("d/M/y"))
 
-        if (TextUtils.isEmpty(codAlumno)||TextUtils.isEmpty(hora)||fecha.isEmpty()) {
-            Snackbar.make(binding.root, "Rellene todos los campos", Snackbar.LENGTH_SHORT).show()
+        realizarComprobaciones(codAlumno, hora, fechaAhora, codProfesor, observaciones)
+    }
+
+    private fun realizarComprobaciones(
+        codAlumno: String,
+        hora: String,
+        fechaAhora: LocalDate?,
+        codProfesor: String?,
+        observaciones: String
+    ) {
+        if (TextUtils.isEmpty(codAlumno) || TextUtils.isEmpty(hora) || fecha.isEmpty()) {
+            Snackbar.make(binding.root, "Por favor, no deje campos vacíos. ¿Has puesto fecha?", Snackbar.LENGTH_SHORT).show()
         } else if (!bd.existeAlumno(codAlumno.toInt())) {
-            Snackbar.make(binding.root, "No existe el alumno con ese codigo", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, "No existe ningún alumno con el código introducido", Snackbar.LENGTH_SHORT)
+                .show()
             binding.txtCodAlumno.setText("")
             binding.txtCodAlumno.requestFocus()
-        } else if (hora.toInt() > 6) {
-            Snackbar.make(binding.root, "Hora no valida (1-6)", Snackbar.LENGTH_SHORT).show()
-        } else if (LocalDate.parse(fecha, DateTimeFormatter.ofPattern("d-M-y"))
-                .isAfter(fechaAhora)) {
-            Snackbar.make(binding.root, "La fecha es mayor a la actual", Snackbar.LENGTH_SHORT).show()
+        } else if (hora.toInt() > 6 || hora.toInt() < 1) {
+            Snackbar.make(binding.root, "Hora no valida. Introduzca una hora válida (comprendida entre 1 y 6)", Snackbar.LENGTH_SHORT).show()
+        } else if (LocalDate.parse(fecha, DateTimeFormatter.ofPattern("d/M/y"))
+                .isAfter(fechaAhora)
+        ) {
+            Snackbar.make(binding.root, "La fecha introducida es mayor a la actual", Snackbar.LENGTH_SHORT)
+                .show()
         } else if (bd.existFalta(codAlumno.toInt(), fecha, hora.toInt())) {
             Snackbar.make(binding.root, "Falta duplicada", Snackbar.LENGTH_SHORT).show()
 
             if (bd.existFaltaProfesor(codProfesor)) {
-                Snackbar.make(binding.root, "Falta puesta por ti", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(binding.root, "Falta ya existente", Snackbar.LENGTH_SHORT).show()
                 finish()
             }
         } else {
-            falta = Faltas(null, codAlumno.toInt(), fecha, hora.toInt(), codProfesor.toString(), 0, observaciones)
-            Snackbar.make(binding.root, "Falta puesta correctamente", Snackbar.LENGTH_SHORT).show()
+            falta = Faltas(
+                null,
+                codAlumno.toInt(),
+                fecha,
+                hora.toInt(),
+                codProfesor.toString(),
+                0,
+                observaciones
+            )
+            Snackbar.make(binding.root, "Falta puesta correctamente. Puede salir pulsando el botón Cancelar, o escribir otra falta", Snackbar.LENGTH_SHORT).show()
             bd.addFalta(falta)
         }
     }

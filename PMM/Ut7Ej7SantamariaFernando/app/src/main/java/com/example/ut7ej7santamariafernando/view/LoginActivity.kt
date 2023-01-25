@@ -30,9 +30,6 @@ class LoginActivity : AppCompatActivity() {
         if(bd.checkEmptyTable(MyDBOpenHelper.TABLA_PROFESOR)){
             altaProfesores()
         }
-        if(bd.checkEmptyTable(MyDBOpenHelper.TABLA_FALTAS)){
-            altaFaltas()
-        }
         if(bd.checkEmptyTable(MyDBOpenHelper.TABLA_ALUPROF)){
             altaAluProf()
         }
@@ -86,19 +83,11 @@ class LoginActivity : AppCompatActivity() {
         val profPrueba2 = Profesor(
             "12345678Z", "ljimenezr", "123", "Laura Jimenez Ruiz"
         )
+
         Thread {
             bd.addProfesor(profPrueba1)
             bd.addProfesor(profPrueba2)
-        }.start()
-    }
 
-    private fun altaFaltas() {
-        val faltaPrueba = Faltas(
-        null, 1, "13/01/2023", 2, "12345678A", 0, "Se quedó dormido"
-        )
-
-        Thread {
-            bd.addFalta(faltaPrueba)
         }.start()
     }
 

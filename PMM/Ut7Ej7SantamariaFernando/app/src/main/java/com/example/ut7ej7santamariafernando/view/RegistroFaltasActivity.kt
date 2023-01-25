@@ -37,6 +37,11 @@ class RegistroFaltasActivity : AppCompatActivity(), Eventos {
             intent.putExtra("dniProf", dniProf)
             startActivity(intent)
         }
+
+        binding.btnRefrescar.setOnClickListener{
+            startActivity(getIntent())
+            finish()
+        }
     }
 
     override fun pulsacionCorta(cursor: Cursor, posicion: Int) {
@@ -54,6 +59,7 @@ class RegistroFaltasActivity : AppCompatActivity(), Eventos {
             bd.justificarFalta(posicion+1)
             Snackbar.make(binding.root,"Se ha justificado la falta correctamente",Snackbar.LENGTH_SHORT).show()
             startActivity(getIntent())
+            finish()
         }
         builder.setNeutralButton(android.R.string.cancel, null)
         builder.show()

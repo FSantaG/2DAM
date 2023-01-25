@@ -26,9 +26,9 @@ class FaltasAdapter(private val faltas:Cursor, private val listener: Eventos): R
 
         with(holder){
             binding.alumno.text = faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_ALU_NOMBRE))
-            binding.profesor.text = "Profesor: " + faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_PROF_NOMBREPROFESOR))
+            binding.profesor.text = faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_PROF_NOMBREPROFESOR))
             binding.fecha.text = faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_FAL_FECHA))
-            binding.hora.text = "Hora " + faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_FAL_HORA))
+            binding.hora.text = faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_FAL_HORA))
 
             if (faltas.getString(faltas.getColumnIndexOrThrow(MyDBOpenHelper.COL_FAL_JUSTIFICADA)) == "0") {
                 binding.falta.setBackgroundColor(Color.RED)

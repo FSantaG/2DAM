@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.LoginActivity">
+    android:background="@android:color/holo_blue_light"
+    tools:context=".view.LoginActivity">
 
     <TextView
         android:id="@+id/loginText"
@@ -13,7 +14,8 @@
         android:layout_marginTop="132dp"
         android:gravity="center_horizontal"
         android:text="Laggy Rocket Team Developer Group"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="@color/black"
+        android:background="@android:color/holo_blue_dark"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintTop_toBottomOf="@+id/loginText">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -33,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColorHint="@color/white"
             android:hint="@string/user"
             app:endIconMode="clear_text"
             app:helperText="@string/required"
@@ -49,6 +52,7 @@
             android:id="@+id/clave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
             android:hint="@string/password"
             app:endIconMode="password_toggle"
             app:helperText="@string/required"
@@ -68,8 +72,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

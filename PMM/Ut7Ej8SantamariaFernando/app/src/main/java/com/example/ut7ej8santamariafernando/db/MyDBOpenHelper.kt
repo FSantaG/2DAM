@@ -1,4 +1,4 @@
-package com.example.ut7ej8santamariafernando.DB
+package com.example.ut7ej8santamariafernando.db
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

@@ -1,12 +1,12 @@
-package com.example.ut7ej8santamariafernando.View
+package com.example.ut7ej8santamariafernando.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.ut7ej8santamariafernando.DB.DBQueries
-import com.example.ut7ej8santamariafernando.DB.MyDBOpenHelper
+import com.example.ut7ej8santamariafernando.db.DBQueries
+import com.example.ut7ej8santamariafernando.db.MyDBOpenHelper
 import com.example.ut7ej8santamariafernando.R
 import com.example.ut7ej8santamariafernando.databinding.ActivitySplashScreenBinding
 
@@ -19,7 +19,7 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(binding.root)
 
         bd = DBQueries(this)
         if(bd.checkEmptyTable(MyDBOpenHelper.TABLA_USUARIO)){

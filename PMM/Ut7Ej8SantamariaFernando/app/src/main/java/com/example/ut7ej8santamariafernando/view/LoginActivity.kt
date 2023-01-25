@@ -1,11 +1,10 @@
-package com.example.ut7ej8santamariafernando.View
+package com.example.ut7ej8santamariafernando.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ut7ej8santamariafernando.DB.DBQueries
+import com.example.ut7ej8santamariafernando.db.DBQueries
 import com.example.ut7ej8santamariafernando.databinding.ActivityLoginBinding
-import com.example.ut7ej8santamariafernando.databinding.ActivitySplashScreenBinding
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
@@ -43,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 val intent = Intent(this, MenuOpcionesActivity::class.java)
                 intent.putExtra("userId", usuarioLogueado.id)
-                intent.putExtra("Role", usuarioLogueado.perfil)
+                intent.putExtra("role", usuarioLogueado.perfil)
                 startActivity(intent)
             }
         }
