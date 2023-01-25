@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.LoginActivity">
+    tools:context=".View.LoginActivity">
 
     <TextView
         android:id="@+id/loginText"
@@ -12,14 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
         android:gravity="center_horizontal"
-        android:text=""
+        android:text="Laggy Rocket Team Developer Group"
         android:textColor="@android:color/holo_red_light"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Iniciar Sesión en la Aplicación" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/datosLayout"

@@ -1,4 +1,4 @@
-package com.example.ut7ej7santamariafernando.View
+package com.example.ut7ej7santamariafernando.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.example.ut7ej7santamariafernando.DB_Ops.DBQueries
-import com.example.ut7ej7santamariafernando.MyDBOpenHelper
 import com.example.ut7ej7santamariafernando.databinding.ActivitySplashScreenBinding
 
 class SplashScreen : AppCompatActivity() {

@@ -1,7 +1,10 @@
 package com.example.ut7ej8santamariafernando.View
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import com.example.ut7ej8santamariafernando.DB.DBQueries
 import com.example.ut7ej8santamariafernando.DB.MyDBOpenHelper
 import com.example.ut7ej8santamariafernando.R
@@ -22,12 +25,19 @@ class SplashScreen : AppCompatActivity() {
         if(bd.checkEmptyTable(MyDBOpenHelper.TABLA_USUARIO)){
             addUsers()
         }
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
     }
 
     fun addUsers(){
         val usuarios = resources.getStringArray(R.array.usuarios)
         for(usuario in usuarios){
             val datosUsuario = usuario.split("*")
+
             Thread {
                 bd.addUsuario(datosUsuario)
             }.start()

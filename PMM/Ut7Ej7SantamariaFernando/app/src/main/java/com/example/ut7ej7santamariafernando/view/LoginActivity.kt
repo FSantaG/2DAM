@@ -1,22 +1,19 @@
-package com.example.ut7ej7santamariafernando.View
+package com.example.ut7ej7santamariafernando.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ut7ej7santamariafernando.DB_Ops.DBQueries
-import com.example.ut7ej7santamariafernando.Model.AluProf
-import com.example.ut7ej7santamariafernando.Model.Alumno
-import com.example.ut7ej7santamariafernando.Model.Faltas
-import com.example.ut7ej7santamariafernando.Model.Profesor
+import com.example.ut7ej7santamariafernando.db.DBQueries
+import com.example.ut7ej7santamariafernando.model.AluProf
+import com.example.ut7ej7santamariafernando.model.Alumno
+import com.example.ut7ej7santamariafernando.model.Faltas
+import com.example.ut7ej7santamariafernando.model.Profesor
 import com.example.ut7ej7santamariafernando.MyDBOpenHelper
 import com.example.ut7ej7santamariafernando.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
-    /**
-     * Si casca la aplicación, o vuelve a salir lo del virtual method ese raro,
-     * Realizar un clear y un rebuild (se encuentran en la pestaña Build)
-     */
+
     private lateinit var binding: ActivityLoginBinding
     private lateinit var bd:DBQueries
 
@@ -62,7 +59,8 @@ class LoginActivity : AppCompatActivity() {
                         Snackbar.LENGTH_SHORT
                     ).show()
                 } else {
-                    val intent = Intent(this, Alumnos::class.java)
+                    val intent = Intent(this, RegistroFaltasActivity::class.java)
+                    intent.putExtra("dniProf", profesor.dni)
                     startActivity(intent)
                 }
             }

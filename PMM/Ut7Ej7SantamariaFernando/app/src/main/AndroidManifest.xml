@@ -15,14 +15,24 @@
         android:theme="@style/Theme.Ut7Ej7SantamariaFernando"
         tools:targetApi="31">
         <activity
-            android:name=".Alumnos"
-            android:exported="false">
+            android:name=".view.CrearFaltaActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".view.RegistroFaltasActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".View.SplashScreen"
+            android:name=".view.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -36,7 +46,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".View.LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data

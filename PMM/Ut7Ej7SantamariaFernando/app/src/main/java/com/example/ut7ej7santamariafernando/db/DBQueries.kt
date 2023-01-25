@@ -1,13 +1,13 @@
-package com.example.ut7ej7santamariafernando.DB_Ops
+package com.example.ut7ej7santamariafernando.db
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import com.example.ut7ej7santamariafernando.Model.AluProf
-import com.example.ut7ej7santamariafernando.Model.Alumno
-import com.example.ut7ej7santamariafernando.Model.Faltas
-import com.example.ut7ej7santamariafernando.Model.Profesor
+import com.example.ut7ej7santamariafernando.model.AluProf
+import com.example.ut7ej7santamariafernando.model.Alumno
+import com.example.ut7ej7santamariafernando.model.Faltas
+import com.example.ut7ej7santamariafernando.model.Profesor
 import com.example.ut7ej7santamariafernando.MyDBOpenHelper
 
 class DBQueries(contexto:Context) {
@@ -32,7 +32,7 @@ class DBQueries(contexto:Context) {
         mBD.insert(MyDBOpenHelper.TABLA_ALUMNOS, null, values)
     }
 
-    fun getAlumno(codigoProfesor:String) : MutableList<Alumno>{
+    /*fun getAlumno(codigoProfesor:String) : MutableList<Alumno>{
         var alumnos: MutableList<Alumno> = ArrayList()
         val cursor: Cursor = mBD.rawQuery(
             "SELECT * FROM ${MyDBOpenHelper.TABLA_ALUMNOS} " +
@@ -55,7 +55,7 @@ class DBQueries(contexto:Context) {
             cursor.close()
         }
         return alumnos
-    }
+    }*/
 
     fun addProfesor(profesor: Profesor){
         val values = ContentValues()
@@ -104,8 +104,53 @@ class DBQueries(contexto:Context) {
         mBD.insert(MyDBOpenHelper.TABLA_FALTAS, null, values)
     }
 
-    fun getFalta(){
-        TODO()
+    fun getFalta(dniProf: String): Cursor {
+        val faltas = mBD.rawQuery(
+            "SELECT ${MyDBOpenHelper.TABLA_ALUMNOS}.${MyDBOpenHelper.COL_ALU_NOMBRE}, ${MyDBOpenHelper.TABLA_PROFESOR}.${MyDBOpenHelper.COL_PROF_NOMBREPROFESOR}, ${MyDBOpenHelper.TABLA_FALTAS}.${MyDBOpenHelper.COL_FAL_FECHA}, ${MyDBOpenHelper.TABLA_FALTAS}.${MyDBOpenHelper.COL_FAL_HORA}, ${MyDBOpenHelper.TABLA_FALTAS}.${MyDBOpenHelper.COL_FAL_JUSTIFICADA}\n " +
+                    "FROM ${MyDBOpenHelper.TABLA_FALTAS}\n" +
+                    "INNER JOIN ${MyDBOpenHelper.TABLA_ALUMNOS} ON ${MyDBOpenHelper.TABLA_ALUMNOS}.${MyDBOpenHelper.COL_ALU_CODIGOALUMNO} = ${MyDBOpenHelper.TABLA_FALTAS}.${MyDBOpenHelper.COL_FAL_CODIGOALUMNO}\n" +
+                    "INNER JOIN ${MyDBOpenHelper.TABLA_PROFESOR} ON ${MyDBOpenHelper.TABLA_PROFESOR}.${MyDBOpenHelper.COL_PROF_DNIPROF} = ${MyDBOpenHelper.TABLA_FALTAS}.${MyDBOpenHelper.COL_FAL_CODIGOPROFE}\n" +
+                    "WHERE ${MyDBOpenHelper.TABLA_FALTAS}.${MyDBOpenHelper.COL_FAL_CODIGOPROFE} = \"${dniProf}\"",
+            null
+        )
+        return faltas;
+    }
+
+    fun existeAlumno(codAlumno: Int): Boolean {
+        val resultado: Boolean
+        val cursor: Cursor = mBD.rawQuery(
+            "SELECT * FROM ${MyDBOpenHelper.TABLA_ALUMNOS} " +
+                "WHERE ${MyDBOpenHelper.COL_FAL_CODIGOALUMNO} = '$codAlumno' ", null
+        )
+        resultado = cursor.moveToFirst()
+        cursor.close()
+
+        return resultado
+    }
+
+    fun existFalta(codAlumno: Int, fecha: String, hora: Int): Boolean {
+        val resultado: Boolean
+        val cursor: Cursor = mBD.rawQuery(
+            "SELECT * FROM ${MyDBOpenHelper.TABLA_FALTAS} " +
+                    "WHERE ${MyDBOpenHelper.COL_FAL_CODIGOALUMNO} = '$codAlumno' " + "AND ${MyDBOpenHelper.COL_FAL_FECHA} = '$fecha' " +
+                    "AND ${MyDBOpenHelper.COL_FAL_HORA} = '$hora'", null
+        )
+        resultado = cursor.moveToFirst()
+        cursor.close()
+
+        return resultado
+    }
+
+    fun existFaltaProfesor(codProfesor: String?): Boolean {
+        val resultado: Boolean
+        val cursor: Cursor = mBD.rawQuery(
+            "SELECT * FROM ${MyDBOpenHelper.TABLA_FALTAS} " +
+                    "WHERE ${MyDBOpenHelper.COL_FAL_CODIGOPROFE} = '$codProfesor' ", null
+        )
+        resultado = cursor.moveToFirst()
+        cursor.close()
+
+        return resultado
     }
 
     fun addAluProf(aluProf: AluProf){
@@ -126,5 +171,17 @@ class DBQueries(contexto:Context) {
         vacia = !cursor.moveToFirst()
         cursor.close()
         return vacia
+    }
+
+    fun justificarFalta(idUsuario:Int){
+        val values = ContentValues()
+        values.put(MyDBOpenHelper.COL_FAL_JUSTIFICADA, 1)
+
+        mBD.update(
+            MyDBOpenHelper.TABLA_FALTAS,
+            values,
+            "${MyDBOpenHelper.COL_FAL_CODIGOALUMNO} = ${idUsuario}",
+            null
+        )
     }
 }
