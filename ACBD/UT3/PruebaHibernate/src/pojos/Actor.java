@@ -20,8 +20,11 @@ public class Actor  implements java.io.Serializable {
 
     public Actor() {
     }
-
-	
+    
+    public Actor(Short id){
+        this.actorId = id;
+    }
+    
     public Actor(String firstName, String lastName, Date lastUpdate) {
         this.firstName = firstName;
         this.lastName = lastName;
