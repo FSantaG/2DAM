@@ -12,9 +12,13 @@ import pojos.NewHibernateUtil;
 public class PruebasHibernate {
     public static void main(String[] args) {       
         //addActor("Daniel", "Ontañón");
-        Short id = 208;
-        modifyActor(id, "DANIEL", "ONTAÑÓN");
+        Short id = 210;
+        //modifyActor(id, "DANIEL", "MONTAÑÓN");
+        //obtainActor(id);
+        //deleteActor(id, "DANIEL", "MONTAÑÓN");
         selectActor();
+        
+        System.exit(0);
     }
     
     public static void addActor(String firstName, String lastName){
@@ -45,11 +49,14 @@ public class PruebasHibernate {
         session.close();
     }
     
-    public static void deleteActor(Short id){
+    public static void deleteActor(Short id, String firstName, String lastName){
         Transaction tx = null;
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         tx = session.beginTransaction();
         Actor actor = new Actor(id);
+        actor.setFirstName(firstName);
+        actor.setLastName(lastName);
+        actor.setLastUpdate(new Date());
         session.delete(actor);
         tx.commit();
         System.out.println("Actor borrado con éxito");
@@ -65,7 +72,7 @@ public class PruebasHibernate {
         session.close();
     }
     
-        public static void selectActor(){
+    public static void selectActor(){
         //Hay que coger todos los datos, y poner el nombre de la clase (es decir, la primera mayúscula)
         String stringQuery = "SELECT a FROM Actor a";
         Session session = NewHibernateUtil.getSessionFactory().openSession();
