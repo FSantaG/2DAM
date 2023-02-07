@@ -1,0 +1,15 @@
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\Repaso2daEvaluacion.exe.config
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\Repaso2daEvaluacion.exe
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\Repaso2daEvaluacion.pdb
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.csproj.AssemblyReference.cache
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.inicio.resources
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.Properties.Resources.resources
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.csproj.GenerateResource.cache
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.csproj.CoreCompileInputs.cache
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.csproj.CopyComplete
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.exe
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.pdb
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.Consultar.resources
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.Fichar.resources
