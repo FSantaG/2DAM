@@ -1,4 +1,4 @@
-package com.example.ej9santamariafernandobd.bd
+package com.example.ej9santamariafernandobd.modelo
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -75,7 +75,7 @@ class MyDBOpenHelper (
                         "${COL_CIT_FECHA} TEXT," +
                         "${COL_CIT_HORA} TEXT," +
                         "${COL_CIT_NUMCOLEGIADO} INTEGER," +
-                        "${COL_CIT_NUMAFILIACION} TEXT CHECK(length(${COL_CIT_NUMAFILIACION}) <= 20," +
+                        "${COL_CIT_NUMAFILIACION} TEXT CHECK(length(${COL_CIT_NUMAFILIACION}) <= 20)," +
                         "PRIMARY KEY(${COL_CIT_ID} AUTOINCREMENT)," +
                         "FOREIGN KEY(${COL_CIT_NUMCOLEGIADO}) REFERENCES ${TABLA_PROFESIONALES}(${COL_PRO_NUMCOLEGIADO})," +
                         "FOREIGN KEY(${COL_CIT_NUMAFILIACION}) REFERENCES ${TABLA_USUARIOS}(${COL_USU_NUMAFILIACION})" +

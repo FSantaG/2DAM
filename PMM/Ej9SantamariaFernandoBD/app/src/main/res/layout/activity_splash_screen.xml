@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#70b7fa"
-    tools:context=".view.SplashScreen">
+    tools:context=".vista.SplashScreen">
 
     <ImageView
         android:id="@+id/corpImage"
@@ -15,7 +15,7 @@
         android:contentDescription="Logo SACYL"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp"
-        tools:src="@drawable/ic_placeholder_image_foreground" />
+        tools:src="@drawable/ic_banner_foreground" />
 
     <TextView
         android:id="@+id/descr"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profesionales">
+        <item>1*Laura Gallego*</item>
+        <item>2*Maria José Cantudo</item>
+        <item>3*Ernesto Gutiérrez</item>
+        <item>4*Gustavo Martínez</item>
+        <item>5*Alicia Giménez</item>
+    </string-array>
+</resources>
