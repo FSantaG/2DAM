@@ -32,16 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.rbEntrada = new System.Windows.Forms.RadioButton();
             this.rbSalida = new System.Windows.Forms.RadioButton();
-            this.txtNumEmpleado = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.rbEntrada = new System.Windows.Forms.RadioButton();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtNumEmpleado = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnFichar = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,6 +85,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entrada/Salida";
             // 
+            // rbSalida
+            // 
+            this.rbSalida.AutoSize = true;
+            this.rbSalida.Location = new System.Drawing.Point(257, 56);
+            this.rbSalida.Name = "rbSalida";
+            this.rbSalida.Size = new System.Drawing.Size(54, 17);
+            this.rbSalida.TabIndex = 4;
+            this.rbSalida.TabStop = true;
+            this.rbSalida.Text = "Salida";
+            this.rbSalida.UseVisualStyleBackColor = true;
+            // 
+            // rbEntrada
+            // 
+            this.rbEntrada.AutoSize = true;
+            this.rbEntrada.Location = new System.Drawing.Point(177, 55);
+            this.rbEntrada.Name = "rbEntrada";
+            this.rbEntrada.Size = new System.Drawing.Size(62, 17);
+            this.rbEntrada.TabIndex = 3;
+            this.rbEntrada.TabStop = true;
+            this.rbEntrada.Text = "Entrada";
+            this.rbEntrada.UseVisualStyleBackColor = true;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(27, 55);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
+            this.txtFecha.Size = new System.Drawing.Size(114, 20);
+            this.txtFecha.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(174, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Control (Selecciona Uno)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Fecha/Hora";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -98,70 +146,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Identificación";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Fecha/Hora";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(174, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Control (Selecciona Uno)";
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(27, 55);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.ReadOnly = true;
-            this.txtFecha.Size = new System.Drawing.Size(114, 20);
-            this.txtFecha.TabIndex = 2;
-            // 
-            // rbEntrada
-            // 
-            this.rbEntrada.AutoSize = true;
-            this.rbEntrada.Location = new System.Drawing.Point(177, 55);
-            this.rbEntrada.Name = "rbEntrada";
-            this.rbEntrada.Size = new System.Drawing.Size(62, 17);
-            this.rbEntrada.TabIndex = 3;
-            this.rbEntrada.TabStop = true;
-            this.rbEntrada.Text = "Entrada";
-            this.rbEntrada.UseVisualStyleBackColor = true;
-            // 
-            // rbSalida
-            // 
-            this.rbSalida.AutoSize = true;
-            this.rbSalida.Location = new System.Drawing.Point(257, 56);
-            this.rbSalida.Name = "rbSalida";
-            this.rbSalida.Size = new System.Drawing.Size(54, 17);
-            this.rbSalida.TabIndex = 4;
-            this.rbSalida.TabStop = true;
-            this.rbSalida.Text = "Salida";
-            this.rbSalida.UseVisualStyleBackColor = true;
-            // 
-            // txtNumEmpleado
-            // 
-            this.txtNumEmpleado.Location = new System.Drawing.Point(30, 55);
-            this.txtNumEmpleado.Name = "txtNumEmpleado";
-            this.txtNumEmpleado.Size = new System.Drawing.Size(114, 20);
-            this.txtNumEmpleado.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Número Empleado";
             // 
             // textBox2
             // 
@@ -178,6 +162,22 @@
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Nombre:";
+            // 
+            // txtNumEmpleado
+            // 
+            this.txtNumEmpleado.Location = new System.Drawing.Point(30, 55);
+            this.txtNumEmpleado.Name = "txtNumEmpleado";
+            this.txtNumEmpleado.Size = new System.Drawing.Size(114, 20);
+            this.txtNumEmpleado.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Número Empleado";
             // 
             // btnFichar
             // 
@@ -233,6 +233,7 @@
             this.Location = new System.Drawing.Point(17, 15);
             this.Name = "Fichar";
             this.Text = "Fichar";
+            this.Load += new System.EventHandler(this.Fichar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

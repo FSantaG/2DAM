@@ -21,5 +21,10 @@ namespace Repaso2daEvaluacion
         {
             txtFecha.Text = DateTime.Now.ToString();
         }
+
+        private void Fichar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
