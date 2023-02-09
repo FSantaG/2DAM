@@ -7,6 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import pojos.HibernateUtil;
+import pojos.Libros;
 import pojos.Usuario;
 
 
@@ -41,7 +42,11 @@ public class Ejercicio1 {
                 insertUser(nombre, edad);
                 break;
             case "2":
-                insertBook();
+                System.out.println("Introduzca nombre y apellidos del autor");
+                String autor = myObj.nextLine();
+                System.out.println("Introduzca el título del libro");
+                String titulo = myObj.nextLine();
+                insertBook(autor, titulo);
                 break;
             case "3":
                 createLoan();
@@ -74,8 +79,17 @@ public class Ejercicio1 {
         session.close();
     }
 
-    private static void insertBook() {
-        
+    private static void insertBook(String autor, String titulo) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        Date fecha = new Date();  
+        tx=session.beginTransaction();
+        Libros newLibro = new Libros();
+        newLibro.setTitulo(titulo);
+        newLibro.setAutor(autor);
+        session.save(newLibro);
+        tx.commit();
+        session.close();
     }
 
     private static void createLoan() {
@@ -90,14 +104,14 @@ public class Ejercicio1 {
         
     }
     private static void debug(){
-        String stringQuery = "SELECT u FROM Usuario u";
+        String stringQuery = "SELECT u FROM Libros u";
         Session session = HibernateUtil.getSessionFactory().openSession();
         Query query = session.createQuery(stringQuery);
         List resultados = query.list();
         Iterator actoresIterator = resultados.iterator();
         while(actoresIterator.hasNext()){
-            Usuario actor = (Usuario)actoresIterator.next();
-            System.out.println(actor.getIdusuario() + "- " + actor.getNombre() + "(" + actor.getEdad() + ")");
+            Libros actor = (Libros)actoresIterator.next();
+            System.out.println(actor.getIdlibros()+ "- " + actor.getTitulo() + "(" + actor.getAutor() + ")");
         }
         session.close();
     }
