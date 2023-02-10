@@ -69,6 +69,7 @@
             this.btnexportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnexportar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnexportar.UseVisualStyleBackColor = false;
+            this.btnexportar.Click += new System.EventHandler(this.btnexportar_Click);
             // 
             // btnbuscar
             // 
@@ -120,7 +121,7 @@
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.Size = new System.Drawing.Size(1060, 437);
             this.dgvdata.TabIndex = 210;
-           // 
+            // 
             // id
             // 
             this.id.HeaderText = "id";

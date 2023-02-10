@@ -13,3 +13,10 @@ C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repa
 C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.pdb
 C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.Consultar.resources
 C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\obj\Debug\Repaso2daEvaluacion.Fichar.resources
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\ClosedXML.dll
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\ExcelNumberFormat.dll
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\ClosedXML.pdb
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\ClosedXML.xml
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\dam\2DAM\DDI\UT4\Repaso2daEvaluacion\Repaso2daEvaluacion\bin\Debug\ExcelNumberFormat.xml
