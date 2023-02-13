@@ -2,4 +2,7 @@
     <string name="app_name">Ej9SantamariaFernandoBD</string>
     <string name="descripcion">Gestor de Citas Médicas</string>
     <string name="author">Creado por Fernando Santamaría</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="required">Required</string>
 </resources>

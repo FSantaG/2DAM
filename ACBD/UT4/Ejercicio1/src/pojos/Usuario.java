@@ -18,7 +18,11 @@ public class Usuario  implements java.io.Serializable {
 
     public Usuario() {
     }
-
+    
+     public Usuario(int id) {
+        this.idusuario = id;
+    }
+    
     public Usuario(String nombre, Integer edad, Set prestamoses) {
        this.nombre = nombre;
        this.edad = edad;

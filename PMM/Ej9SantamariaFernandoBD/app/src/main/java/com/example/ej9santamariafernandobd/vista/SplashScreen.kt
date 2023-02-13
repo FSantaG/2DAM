@@ -8,12 +8,12 @@ import android.os.Looper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.ej9santamariafernandobd.R
-import com.example.ej9santamariafernandobd.modelo.MyDBOpenHelper
 import com.example.ej9santamariafernandobd.databinding.ActivitySplashScreenBinding
 import com.example.ej9santamariafernandobd.modelo.DBQueries
+import com.example.ej9santamariafernandobd.modelo.MyDBOpenHelper
 
 class SplashScreen : AppCompatActivity() {
-    private lateinit var binding:ActivitySplashScreenBinding
+    private lateinit var binding: ActivitySplashScreenBinding
     private lateinit var bd: DBQueries
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

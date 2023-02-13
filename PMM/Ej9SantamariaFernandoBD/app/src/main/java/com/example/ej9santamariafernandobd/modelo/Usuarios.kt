@@ -1,5 +1,5 @@
 package com.example.ej9santamariafernandobd.modelo
 
-data class Usuarios(val numAfiliado:String, val nombre:String){
+data class Usuarios(var numAfiliado:String, var nombre:String){
 
 }

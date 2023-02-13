@@ -1,4 +1,5 @@
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -8,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import pojos.HibernateUtil;
 import pojos.Libros;
+import pojos.Prestamos;
 import pojos.Usuario;
 
 
@@ -49,13 +51,15 @@ public class Ejercicio1 {
                 insertBook(autor, titulo);
                 break;
             case "3":
-                createLoan();
+                System.out.println("Introduzca nombre y apellidos del autor");
+                String nomUsuario = myObj.nextLine();
+                createLoan(nomUsuario);
                 break;
             case "4":
                 deleteUser();
                 break;
             case "5":
-                finishLoan();
+                //finishLoan();
                 break;
             case "e":
             case "E":
@@ -92,17 +96,55 @@ public class Ejercicio1 {
         session.close();
     }
 
-    private static void createLoan() {
-        
+    private static void createLoan(int idLibro, int idUsuario) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        tx = session.beginTransaction();
+
+        Prestamos prestamo = new Prestamos();
+
+        Libros libro = new Libros(idLibro);
+        libro.setIdlibros(idLibro);
+
+        Usuario usuario = new Usuario(idUsuario);
+        usuario.setIdusuario(idUsuario);
+
+        prestamo.setLibros(libro);
+        prestamo.setUsuario(usuario);
+        prestamo.setFechaPrestamo(new Date());
+
+        //SUMAR 15 DÍAS A LA FECHA
+        Date fecha = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(fecha);
+        calendar.add(Calendar.DAY_OF_YEAR, 15);
+        prestamo.setFechaDevolucion(calendar.getTime());
+
+        session.save(prestamo);
+        tx.commit();
+        System.out.println("Prestamo realizado correctamente");
+        session.close();
+        System.exit(0);
     }
 
     private static void deleteUser() {
         
     }
 
-    private static void finishLoan() {
-        
+    private static void finishLoan(Short id, String firstName, String lastName){
+        /*Transaction tx = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        tx = session.beginTransaction();
+        Prestamos prestamo = new Prestamos(id);
+        prestamo.setFirstName(firstName);
+        prestamo.setLastName(lastName);
+        prestamo.setLastUpdate(new Date());
+        session.update(prestamo);
+        tx.commit();
+        System.out.println("Valor Modificado sin Problemas");
+        session.close();*/
     }
+    
     private static void debug(){
         String stringQuery = "SELECT u FROM Libros u";
         Session session = HibernateUtil.getSessionFactory().openSession();
