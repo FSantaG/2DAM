@@ -220,7 +220,7 @@ public class Servidor extends javax.swing.JFrame implements Runnable{
             indexLlave++;
             int intercambio4 = Character.valueOf(lecturaLlave.charAt(indexLlave)) - 48;
             indexLlave++;
-            System.out.println(intercambio1 + " " + intercambio2 + " " + intercambio3 + " " + intercambio4);
+           
             char caracter;
             int codigoAscii;
             int auxiliar = 0;
@@ -250,7 +250,7 @@ public class Servidor extends javax.swing.JFrame implements Runnable{
                 }
 
                 binario = binario.concat(Character.toString(caracter));
-                System.out.println(binario);
+                
                 auxiliar++;
 
                 //hemos avanzado una letra

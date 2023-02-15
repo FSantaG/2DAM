@@ -166,6 +166,7 @@ public class Cliente extends javax.swing.JFrame {
                 codigoAscii = caracter;
                 System.out.println(codigoAscii);
                 binario = "";
+                String binario2 = "";
                 //System.out.println("caracter 1: "+ caracter + " numero: "+ codigoAscii);
                 //letras son 8 digitos en ASCII
 
@@ -179,25 +180,25 @@ public class Cliente extends javax.swing.JFrame {
                     } else {
                         binario = binario.concat("0");
                     }
-                    System.out.println(binario);
+                    
                 }
-
+                
                 do {
                     intercambioValor1 = (int) (Math.random() * 10);
-                    System.out.println("int 1: "+intercambioValor1);
+                    
                 } while (intercambioValor1 > 7);
                 do {
                     intercambioValor2 = (int) (Math.random() * 10);
-                    System.out.println("int 2: "+intercambioValor2);
+                    
                 } while (intercambioValor2 > 7 || intercambioValor2 == intercambioValor1);
                 do {
                     intercambioValor3 = (int) (Math.random() * 10);
-                    System.out.println("int 3: "+intercambioValor3);
+                   
                 } while (intercambioValor3 > 7 || intercambioValor3 == intercambioValor1
                         || intercambioValor3 == intercambioValor2);
                 do {
                     intercambioValor4 = (int) (Math.random() * 10);
-                    System.out.println("int 4: "+intercambioValor3);
+                   
                 } while (intercambioValor4 > 7 || intercambioValor4 == intercambioValor1
                         || intercambioValor4 == intercambioValor2 || intercambioValor4 == intercambioValor3);
                 String binarioEncriptado = "";
@@ -210,9 +211,7 @@ public class Cliente extends javax.swing.JFrame {
                     if (x == intercambioValor2) caracter = binario.charAt(intercambioValor1);
                     if (x == intercambioValor3) caracter = binario.charAt(intercambioValor4);
                     if (x == intercambioValor4) caracter = binario.charAt(intercambioValor3);
-                    System.out.println("a: "+intercambioValor1+" "+" b: "+intercambioValor2+
-                            " c: "+intercambioValor3+ " d: "+intercambioValor4);
-                    System.out.print("caracter: "+caracter);
+                   
                     binarioEncriptado = binarioEncriptado.concat(Character.toString(caracter));
 
                 }
@@ -221,7 +220,7 @@ public class Cliente extends javax.swing.JFrame {
                 llave = llave.concat(String.valueOf(intercambioValor1) + String.valueOf(intercambioValor2
                         + String.valueOf(intercambioValor3 + String.valueOf(intercambioValor4))));
 
-
+                
             }
                 envio.writeUTF(encriptado);
                 envio.writeUTF(llave);
