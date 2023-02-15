@@ -23,6 +23,12 @@ public class Usuario  implements java.io.Serializable {
         this.idusuario = id;
     }
     
+    public Usuario(int id, String nombre, Integer edad){
+        this.idusuario = id;
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+     
     public Usuario(String nombre, Integer edad, Set prestamoses) {
        this.nombre = nombre;
        this.edad = edad;
