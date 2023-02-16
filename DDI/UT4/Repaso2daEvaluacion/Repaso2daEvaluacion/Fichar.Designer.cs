@@ -38,7 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnBuscarEmpleado = new FontAwesome.Sharp.IconButton();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNumEmpleado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -136,7 +137,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.btnBuscarEmpleado);
+            this.groupBox2.Controls.Add(this.txtNombre);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtNumEmpleado);
             this.groupBox2.Controls.Add(this.label5);
@@ -147,12 +149,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Identificación";
             // 
-            // textBox2
+            // btnBuscarEmpleado
             // 
-            this.textBox2.Location = new System.Drawing.Point(209, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 20);
-            this.textBox2.TabIndex = 8;
+            this.btnBuscarEmpleado.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarEmpleado.IconColor = System.Drawing.Color.Black;
+            this.btnBuscarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarEmpleado.IconSize = 18;
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(490, 53);
+            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
+            this.btnBuscarEmpleado.Size = new System.Drawing.Size(34, 23);
+            this.btnBuscarEmpleado.TabIndex = 9;
+            this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(209, 55);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(275, 20);
+            this.txtNombre.TabIndex = 8;
             // 
             // label6
             // 
@@ -192,6 +207,7 @@
             this.btnFichar.Text = "Fichar";
             this.btnFichar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFichar.UseVisualStyleBackColor = false;
+            this.btnFichar.Click += new System.EventHandler(this.btnFichar_Click);
             // 
             // label7
             // 
@@ -254,7 +270,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNumEmpleado;
         private System.Windows.Forms.Label label5;
@@ -262,5 +278,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconButton btnBuscarEmpleado;
     }
 }
