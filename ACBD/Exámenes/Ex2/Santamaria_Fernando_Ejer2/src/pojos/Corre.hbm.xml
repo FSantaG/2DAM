@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 feb. 2023 14:17:22 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Corre" table="corre" catalog="campeonato_autos" optimistic-lock="version">
+        <composite-id name="id" class="pojos.CorreId">
+            <key-property name="piloto" type="int">
+                <column name="PILOTO" />
+            </key-property>
+            <key-property name="carrera" type="string">
+                <column name="CARRERA" length="5" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="carrera" class="pojos.Carrera" update="false" insert="false" fetch="select">
+            <column name="CARRERA" length="5" not-null="true" />
+        </many-to-one>
+        <many-to-one name="piloto" class="pojos.Piloto" update="false" insert="false" fetch="select">
+            <column name="PILOTO" not-null="true" />
+        </many-to-one>
+        <property name="averias" type="string">
+            <column name="AVERIAS" length="50" />
+        </property>
+        <property name="tiempo" type="int">
+            <column name="TIEMPO" not-null="true" />
+        </property>
+        <property name="rol" type="string">
+            <column name="ROL" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

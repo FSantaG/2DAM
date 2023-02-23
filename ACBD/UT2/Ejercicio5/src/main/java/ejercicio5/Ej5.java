@@ -30,6 +30,7 @@ public class Ej5 {
         Biblioteca biblioteca = (Biblioteca) um.unmarshal(bibliotecaSteam);
         
         ArrayList<Juego> juegosDisponibles = biblioteca.getJuegos();
+        
         for(Juego juego: juegosDisponibles){
             imprimirJuego(juego);
         }

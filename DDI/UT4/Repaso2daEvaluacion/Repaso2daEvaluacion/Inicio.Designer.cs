@@ -48,6 +48,7 @@
             this.menuTitulo.Size = new System.Drawing.Size(1094, 73);
             this.menuTitulo.TabIndex = 2;
             this.menuTitulo.Text = "menuStrip2";
+            this.menuTitulo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuTitulo_ItemClicked);
             // 
             // label1
             // 
@@ -60,6 +61,11 @@
             this.label1.Size = new System.Drawing.Size(147, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "FICHAJES";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // Menu
             // 
@@ -72,6 +78,7 @@
             this.Menu.Size = new System.Drawing.Size(1094, 73);
             this.Menu.TabIndex = 6;
             this.Menu.Text = "Menu";
+            this.Menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ItemClicked);
             // 
             // menufichar
             // 
@@ -123,6 +130,7 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1094, 603);
             this.contenedor.TabIndex = 8;
+            this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 
             // inicio
             // 

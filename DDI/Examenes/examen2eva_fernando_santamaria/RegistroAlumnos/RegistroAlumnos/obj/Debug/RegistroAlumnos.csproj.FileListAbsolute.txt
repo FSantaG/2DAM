@@ -1,0 +1,15 @@
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\bin\Debug\RegistroAlumnos.exe.config
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\bin\Debug\RegistroAlumnos.exe
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\bin\Debug\RegistroAlumnos.pdb
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.csproj.AssemblyReference.cache
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.Inicio.resources
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.Properties.Resources.resources
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.csproj.GenerateResource.cache
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.csproj.CoreCompileInputs.cache
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.csproj.CopyComplete
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.exe
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.pdb
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.Control.resources
+C:\Users\dam\2DAM\DDI\Examenes\examen2eva_fernando_santamaria\RegistroAlumnos\RegistroAlumnos\obj\Debug\RegistroAlumnos.Consulta.resources

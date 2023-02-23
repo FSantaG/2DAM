@@ -63,5 +63,30 @@ namespace Repaso2daEvaluacion
 
             formulario.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void Menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuTitulo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 feb. 2023 14:17:22 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Equipo" table="equipo" catalog="campeonato_autos" optimistic-lock="version">
+        <id name="idEquipo" type="int">
+            <column name="ID_EQUIPO" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="20" not-null="true" />
+        </property>
+        <property name="fecCrea" type="date">
+            <column name="FEC_CREA" length="10" not-null="true" />
+        </property>
+        <property name="eliminado" type="byte">
+            <column name="ELIMINADO" not-null="true" />
+        </property>
+        <property name="patroc" type="string">
+            <column name="PATROC" length="30" />
+        </property>
+        <property name="htot" type="java.lang.Integer">
+            <column name="HTOT" />
+        </property>
+        <set name="pilotos" table="piloto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EQUIPO" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Piloto" />
+        </set>
+    </class>
+</hibernate-mapping>

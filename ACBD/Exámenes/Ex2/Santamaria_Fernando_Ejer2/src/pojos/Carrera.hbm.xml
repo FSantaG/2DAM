@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 feb. 2023 14:17:22 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Carrera" table="carrera" catalog="campeonato_autos" optimistic-lock="version">
+        <id name="idCarrera" type="string">
+            <column name="ID_CARRERA" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="circuito" type="string">
+            <column name="CIRCUITO" length="20" not-null="true" />
+        </property>
+        <property name="categoria" type="java.lang.Integer">
+            <column name="CATEGORIA" />
+        </property>
+        <property name="record" type="java.lang.Integer">
+            <column name="RECORD" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="FECHA" length="10" />
+        </property>
+        <set name="corres" table="corre" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CARRERA" length="5" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Corre" />
+        </set>
+    </class>
+</hibernate-mapping>
